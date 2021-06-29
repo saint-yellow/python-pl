@@ -16,6 +16,7 @@ class Solution:
         if l2 is None:
             return l1
 
+        # 初始化一个哨兵节点
         l3: ListNode = ListNode(-1)
         head = l3
         while l1 and l2:
@@ -27,6 +28,7 @@ class Solution:
                 l2 = l2.next
             l3 = l3.next
 
+        # 接上剩余的链表
         if l1:
             l3.next = l1
         if l2:
