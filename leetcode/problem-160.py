@@ -6,7 +6,7 @@ class ListNode:
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
-        return self.method1(headA, headB)
+        return self.method2(headA, headB)
 
 
     # 基于哈希集合的解法
@@ -24,4 +24,12 @@ class Solution:
 
     # 基于双指针的解法
     def method2(self, headA: ListNode, headB: ListNode) -> ListNode:
-        pass
+        if not headA or not headB:
+            return None
+
+        pointerA: ListNode = headA
+        pointerB: ListNode = headB
+        while pointerA != pointerB:
+            pointerA = headB if not pointerA else pointerA.next
+            pointerB = headA if not pointerB else pointerB.next
+        return pointerA
