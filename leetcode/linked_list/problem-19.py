@@ -1,9 +1,6 @@
 # LeetCode Problem #19: 删除链表的倒数第N个结点
 
 # Definition for singly-linked list.
-from typing import List
-
-
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
