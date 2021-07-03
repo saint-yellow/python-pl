@@ -26,6 +26,6 @@ class Solution:
         pass
 
     # 莫里斯遍历
-    def method2(self, root: TreeNode) -> List[int]:
+    def method3(self, root: TreeNode) -> List[int]:
         pass
 
