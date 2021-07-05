@@ -9,11 +9,11 @@ class ListNode:
 
 class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
-        return self.method1(head, n)
+        return self.__method1(head, n)
 
 
     # 遍历两次
-    def method1(self, head: ListNode, n: int) -> ListNode:
+    def __method1(self, head: ListNode, n: int) -> ListNode:
         L = self.__getLength(head)
         sentinel = ListNode(-1, head)
         current = sentinel
@@ -31,7 +31,7 @@ class Solution:
         return count
 
     # 栈
-    def method2(self, head: ListNode, n: int) -> ListNode:
+    def __method2(self, head: ListNode, n: int) -> ListNode:
         sentinel = ListNode(-1, head)
         current = sentinel
         stack = []
@@ -45,7 +45,7 @@ class Solution:
         return sentinel.next
 
     # 双指针
-    def method3(self, head: ListNode, n: int) -> ListNode:
+    def __method3(self, head: ListNode, n: int) -> ListNode:
         sentinel = ListNode(-1, head)
         slow = sentinel
         fast = sentinel.next

@@ -3,9 +3,9 @@ from typing import List
 
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        return self.method1(height)
+        return self.__method1(height)
 
-    def method1(self, height: List[int]) -> int:
+    def __method1(self, height: List[int]) -> int:
         left, right = 0, len(height)-1
         area = min(height[left], height[right]) * (right - left)
         while left < right:

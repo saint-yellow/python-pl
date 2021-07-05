@@ -13,11 +13,11 @@ class Solution:
         # for i in range(-1, -(n+1), -1):
         #     numbers1[i] = numbers2[i]
 
-        self.method2(numbers1, m, numbers2, n)
+        self.__method2(numbers1, m, numbers2, n)
 
 
     # 基于排序的解法
-    def method1(self, numbers1: List[int], m: int, numbers2: List[int], n: int) -> None:
+    def __method1(self, numbers1: List[int], m: int, numbers2: List[int], n: int) -> None:
         # 或者：
         # for i in range(-1, -(n+1), -1):
         #     numbers1[i] = numbers2[i]
@@ -26,7 +26,7 @@ class Solution:
         numbers1.sort()
 
     # 基于正向双指针的比较冗长的解法
-    def method2(self, numbers1: List[int], m: int, numbers2: List[int], n: int) -> None:
+    def __method2(self, numbers1: List[int], m: int, numbers2: List[int], n: int) -> None:
         pointer1, pointer2 = 0, 0
         numbers3 = []
         while pointer1 < m and pointer2 < n:
@@ -48,7 +48,7 @@ class Solution:
         numbers1[:] = numbers3
 
     # 基于正向双指针的比较简洁的解法
-    def method3(self, numbers1: List[int], m: int, numbers2: List[int], n: int) -> None:
+    def __method3(self, numbers1: List[int], m: int, numbers2: List[int], n: int) -> None:
         pointer1, pointer2 = 0, 0
         numbers3 = []
         while pointer1 < m or pointer2 < n:
@@ -68,7 +68,7 @@ class Solution:
         numbers1[:] = numbers3
 
     # 基于逆向双指针的解法
-    def method4(self, numbers1: List[int], m: int, numbers2: List[int], n: int) -> None:
+    def __method4(self, numbers1: List[int], m: int, numbers2: List[int], n: int) -> None:
         pointer1, pointer2 = m-1, n-1
         tail = m+n-1
         while pointer1 >= 0 or pointer2 >= 0:

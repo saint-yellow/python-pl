@@ -12,20 +12,20 @@ class TreeNode:
 
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
-        return self.method1(root)
+        return self.__method1(root)
 
     # 递归
-    def method1(self, root: TreeNode) -> List[int]:
+    def __method1(self, root: TreeNode) -> List[int]:
         if root is not None:
-            return self.method1(root.left) + [root.value] + self.method1(root.right)
+            return self.__method1(root.left) + [root.value] + self.__method1(root.right)
         else:
             return []
 
     # 迭代
-    def method2(self, root: TreeNode) -> List[int]:
+    def __method2(self, root: TreeNode) -> List[int]:
         pass
 
     # 莫里斯遍历
-    def method3(self, root: TreeNode) -> List[int]:
+    def __method3(self, root: TreeNode) -> List[int]:
         pass
 

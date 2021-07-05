@@ -3,9 +3,9 @@ from typing import List
 
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
-        return self.method1(tokens)
+        return self.__method1(tokens)
 
-    def method1(self, tokens: List[str]) -> int:
+    def __method1(self, tokens: List[str]) -> int:
         mapping = {
             "+": lambda a, b: a+b,
             "-": lambda a, b: a-b,

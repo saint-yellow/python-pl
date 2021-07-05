@@ -3,9 +3,9 @@ from typing import List
 
 class Solution:
     def removeDuplicates(self, numbers: List[int]) -> int:
-        return self.method1(numbers)
+        return self.__method1(numbers)
 
-    def method1(self, numbers: List[int]) -> int:
+    def __method1(self, numbers: List[int]) -> int:
         length = len(numbers)
         if length <= 1:
             return length

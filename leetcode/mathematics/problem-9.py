@@ -9,7 +9,7 @@ class Solution:
         return x == y
 
 
-    def method1(self, x: int) -> bool:
+    def __method1(self, x: int) -> bool:
         if x < 0:
             return False
         y = self.__reverse(x)
@@ -40,6 +40,6 @@ class Solution:
         return l
 
 
-    def method2(self, x: int) -> int:
+    def __method2(self, x: int) -> int:
         str1 = str(x)
         return True if str1 == str1[::-1] else False

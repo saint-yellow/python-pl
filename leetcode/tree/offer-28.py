@@ -13,19 +13,19 @@ class TreeNode:
 
 class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
-        return self.method2(root)
+        return self.__method2(root)
 
     # 递归
-    def method1(self, p: TreeNode, q: TreeNode) -> bool:
+    def __method1(self, p: TreeNode, q: TreeNode) -> bool:
         if not p and not q:
             return True
         if not p or not q:
             return False
-        return p.val == q.val and self.method1(p.left, q.right) and self.method1(p.right, q.left)
+        return p.val == q.val and self.__method1(p.left, q.right) and self.__method1(p.right, q.left)
 
 
     # 迭代
-    def method2(self, root: TreeNode) -> bool:
+    def __method2(self, root: TreeNode) -> bool:
         node1, node2 = root, root
         queue = [node1, node2]
         while len(queue) > 0:

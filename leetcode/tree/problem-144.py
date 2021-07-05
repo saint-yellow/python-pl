@@ -12,12 +12,12 @@ class TreeNode:
 
 class Solution:
     def preorderTraversal(self, root: TreeNode) -> List[int]:
-        return self.method1(root)
+        return self.__method1(root)
 
 
     # 递归
-    def method1(self, root: TreeNode) -> List[int]:
+    def __method1(self, root: TreeNode) -> List[int]:
         if root:
-            return [root.value] + self.method1(root.left) + self.method1(root.right)
+            return [root.value] + self.__method1(root.left) + self.__method1(root.right)
         else:
             return []

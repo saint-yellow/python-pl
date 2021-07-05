@@ -3,11 +3,11 @@ from typing import List
 
 class Solution:
     def containsDuplicate(self, numbers: List[int]) -> bool:
-        return self.method1(numbers)
+        return self.__method1(numbers)
 
 
     # 基于哈希表的解法
-    def method1(self, numbers: List[int]) -> bool:
+    def __method1(self, numbers: List[int]) -> bool:
         d = {}
         for n in numbers:
             if n in d:
@@ -17,7 +17,7 @@ class Solution:
         return False
 
     # 基于排序和双指针的解法
-    def method2(self, numbers: List[int]) -> bool:
+    def __method2(self, numbers: List[int]) -> bool:
         length = len(numbers)
         if length == 1:
             return False

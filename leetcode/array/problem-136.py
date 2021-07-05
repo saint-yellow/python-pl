@@ -3,10 +3,10 @@ from typing import List
 
 class Solution:
     def singleNumber(self, numbers: List[int]) -> int:
-        return self.method1(numbers)
+        return self.__method1(numbers)
 
     # 基于栈的解法
-    def method1(self, numbers: List[int]) -> int:
+    def __method1(self, numbers: List[int]) -> int:
         numbers = sorted(numbers)
 
         while len(numbers) != 1:

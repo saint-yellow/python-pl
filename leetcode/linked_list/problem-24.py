@@ -9,10 +9,10 @@ class ListNode:
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        return self.method1(head)
+        return self.__method1(head)
 
     # 基于双指针的迭代法
-    def method1(self, head: ListNode) -> ListNode:
+    def __method1(self, head: ListNode) -> ListNode:
         slow: ListNode = None
         fast: ListNode = head
         while fast:
@@ -23,14 +23,14 @@ class Solution:
         return slow
 
     # 递归法
-    def method2(self, head: ListNode) -> ListNode:
+    def __method2(self, head: ListNode) -> ListNode:
         if head is None or head.next is None:
             return head
 
-        ret: ListNode = self.method2(head.next)
+        ret: ListNode = self.__method2(head.next)
         head.next.next = head
         head.next = None
         return ret
 
-    def method3(self, head: ListNode) -> ListNode:
+    def __method3(self, head: ListNode) -> ListNode:
         pass

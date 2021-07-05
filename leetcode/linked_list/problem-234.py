@@ -7,10 +7,10 @@ class ListNode:
 
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
-        return self.method3(head)
+        return self.__method3(head)
 
 
-    def method1(self, head: ListNode) -> bool:
+    def __method1(self, head: ListNode) -> bool:
         values = []
         current_node = head
         while current_node is not None:
@@ -19,7 +19,7 @@ class Solution:
         return values == values[::-1]
 
     
-    def method2(self, head: ListNode) -> bool:
+    def __method2(self, head: ListNode) -> bool:
         self.front_pointer = head
         def recursively_check(current_node=head):
             if current_node is not None:
@@ -32,7 +32,7 @@ class Solution:
 
         return recursively_check()
 
-    def method3(self, head: ListNode) -> bool:
+    def __method3(self, head: ListNode) -> bool:
         if head is None:
             return True
 

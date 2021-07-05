@@ -3,9 +3,9 @@ from typing import List
 
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        return self.method1(digits)
+        return self.__method1(digits)
 
-    def method1(self, digits: List[int]) -> List[int]:
+    def __method1(self, digits: List[int]) -> List[int]:
         length = len(digits)
         for i in range(length-1, -1, -1):
             digits[i] += 1

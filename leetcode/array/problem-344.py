@@ -5,9 +5,9 @@ from typing import List
 
 class Solution:
     def reverseString(self, s: List[str]) -> None:
-        return self.method1(s)
+        return self.__method1(s)
 
-    def method1(self, s: List[str]) -> None:
+    def __method1(self, s: List[str]) -> None:
         left, right = 0, len(s)-1
         while left < right:
             s[left], s[right] = s[right], s[left]

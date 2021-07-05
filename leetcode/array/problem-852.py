@@ -4,9 +4,9 @@ from typing import List
 
 class Solution:
     def peakIndexInMountainArray(self, arr: List[int]) -> int:
-        return self.method1(arr)
+        return self.__method1(arr)
 
-    def method1(self, arr: List[int])-> int:
+    def __method1(self, arr: List[int])-> int:
         left = 0
         right = len(arr) - 1
 

@@ -3,10 +3,10 @@ from typing import List
 
 class Solution:
     def findErrorNums(self, numbers: List[int]) -> List[int]:
-        return self.method1(numbers)
+        return self.__method1(numbers)
 
     # 基于排序的解法
-    def method1(self, numbers: List[int]) -> List[int]:
+    def __method1(self, numbers: List[int]) -> List[int]:
         numbers.sort()
         n = len(numbers)
 
@@ -24,7 +24,7 @@ class Solution:
         return [repeatedNumber, missedNumber]
 
     # 基于哈希表的解法
-    def method2(self, numbers: List[int]) -> int:
+    def __method2(self, numbers: List[int]) -> int:
         result = [0, 0]
         mapping = {}
         for n in numbers:
@@ -37,7 +37,7 @@ class Solution:
         return result
 
     # 基于位运算的解法
-    def method3(self, numbers: List[int]) -> int:
+    def __method3(self, numbers: List[int]) -> int:
         pass
 
 

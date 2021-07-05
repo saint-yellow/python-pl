@@ -3,7 +3,7 @@ class Solution:
         pass
 
 
-    def method1(self, s: str, n: int) -> str:
+    def __method1(self, s: str, n: int) -> str:
         l = list(s)
         left = 0
         right = n - 1
@@ -28,5 +28,5 @@ class Solution:
 
         return "".join(l)
 
-    def method2(self, s: str, n: int) -> str:
+    def __method2(self, s: str, n: int) -> str:
         return s[n:] + s[:n]

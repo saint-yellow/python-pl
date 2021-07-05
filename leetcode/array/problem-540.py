@@ -3,10 +3,10 @@ from typing import List
 
 class Solution:
     def singleNonDuplicate(self, numbers: List[int]) -> int:
-        return self.method1(numbers)
+        return self.__method1(numbers)
 
     # 基于栈的解法
-    def method1(self, numbers: List[int]) -> int:
+    def __method1(self, numbers: List[int]) -> int:
         if len(numbers) == 1:
             return numbers[0]
 
@@ -16,10 +16,10 @@ class Solution:
             if i != j:
                 return i
             else:
-                return self.method1(numbers)
+                return self.__method1(numbers)
 
     # 基于双指针的解法
-    def method2(self, numbers: List[int]) -> int:
+    def __method2(self, numbers: List[int]) -> int:
         n = len(numbers)
         i, j = n-1, n-2
         while i > 0:
@@ -31,7 +31,7 @@ class Solution:
         return numbers[0]
 
     # 基于二分搜索的解法
-    def method3(self, numbers: List[int]) -> int:
+    def __method3(self, numbers: List[int]) -> int:
         low, high = 0, len(numbers) - 1
         while low < high:
             middle = low + (high - low) // 2
@@ -51,7 +51,7 @@ class Solution:
         return numbers[low]
 
     # 仅对偶数索引进行二分搜索
-    def method4(self, numbers: List[int]) -> int:
+    def __method4(self, numbers: List[int]) -> int:
         low, high = 0, len(numbers) - 1
         while low < high:
             middle = low + (high - low) // 2

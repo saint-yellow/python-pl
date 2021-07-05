@@ -5,10 +5,10 @@ class ListNode:
 
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
-        return self.method1(head)
+        return self.__method1(head)
 
 
-    def method1(self, head: ListNode) -> ListNode:
+    def __method1(self, head: ListNode) -> ListNode:
         currentNode = head
         while currentNode is not None and currentNode.next is not None:
             if currentNode.val == currentNode.next.val:

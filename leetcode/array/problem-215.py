@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def findKthLargest(self, n: List[int], k: int) -> int:
-        return self.method1(n, k)
+        return self.__method1(n, k)
 
 
     def __quick_sort(self, numbers: List[int], left_pointer: int, right_pointer: int):
@@ -38,7 +38,7 @@ class Solution:
         numbers[pointer1], numbers[pointer2] = numbers[pointer2], numbers[pointer1]
 
     # 基于快速排序的选择方法
-    def method1(self, numbers: List[int], k: int) -> int:
+    def __method1(self, numbers: List[int], k: int) -> int:
 
         self.__quick_sort(numbers, 0, len(numbers)-1)
 
@@ -46,7 +46,7 @@ class Solution:
 
 
     # 基于堆排序的选择方法
-    def method2(self, n: List[int], k: int) -> int:
+    def __method2(self, n: List[int], k: int) -> int:
         pass
 
 

@@ -6,11 +6,11 @@ class ListNode:
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
-        return self.method2(headA, headB)
+        return self.__method2(headA, headB)
 
 
     # 基于哈希集合的解法
-    def method1(self, headA: ListNode, headB: ListNode) -> ListNode:
+    def __method1(self, headA: ListNode, headB: ListNode) -> ListNode:
         nodes = set()
         while headA:
             nodes.add(headA)
@@ -23,7 +23,7 @@ class Solution:
         return None
 
     # 基于双指针的解法
-    def method2(self, headA: ListNode, headB: ListNode) -> ListNode:
+    def __method2(self, headA: ListNode, headB: ListNode) -> ListNode:
         if not headA or not headB:
             return None
 

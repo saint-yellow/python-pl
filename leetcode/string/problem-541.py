@@ -1,8 +1,8 @@
 class Solution:
     def reverseStr(self, s: str, k: int) -> str:
-        return self.method1(s, k)
+        return self.__method1(s, k)
 
-    def method1(self, s: str, k: int) -> str:
+    def __method1(self, s: str, k: int) -> str:
 
         from functools import reduce
         def reverse(s: list):

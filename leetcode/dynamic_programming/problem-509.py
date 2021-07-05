@@ -2,10 +2,10 @@
 
 class Solution:
     def fib(self, n: int) -> int:
-        return self.method1(n)
+        return self.__method1(n)
 
     # 基于动态规划的线性级空间复杂度的解法
-    def method1(self, n: int) -> int:
+    def __method1(self, n: int) -> int:
         dp = [0, 1]
         if n == 0 or n == 1:
             return dp[n]
@@ -14,7 +14,7 @@ class Solution:
         return dp[-1]
 
     # 基于动态规划的常数级空间复杂度的解法
-    def method2(self, n: int) -> int:
+    def __method2(self, n: int) -> int:
         if n < 2:
             return n
 

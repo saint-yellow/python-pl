@@ -10,14 +10,14 @@ class TreeNode:
 
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
-        return self.method2(root)
+        return self.__method2(root)
 
 
     # 自顶向下的解法
-    def method1(self, node: TreeNode, depth: int) -> int:
+    def __method1(self, node: TreeNode, depth: int) -> int:
         pass
 
     # 自底向上的解法
-    def method2(self, node: TreeNode) -> int:
+    def __method2(self, node: TreeNode) -> int:
        pass
 

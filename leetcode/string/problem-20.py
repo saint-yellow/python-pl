@@ -1,9 +1,9 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        return self.method1(s)
+        return self.__method1(s)
 
 
-    def method1(self, s: str) -> bool:
+    def __method1(self, s: str) -> bool:
         mapping = {
             '}': '{',
             ']': '[',

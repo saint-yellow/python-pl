@@ -1,9 +1,9 @@
 class Solution:
 
     def intToRoman(self, number: int) -> int:
-        return self.method1(number)
+        return self.__method1(number)
 
-    def method1(self, number: int) -> str:
+    def __method1(self, number: int) -> str:
         mapping = [
         ('M', 1000), ('CM', 900), ('D', 500), ('CD', 400),
         ('C', 100), ('XC', 90), ('L', 50), ('XL', 40),

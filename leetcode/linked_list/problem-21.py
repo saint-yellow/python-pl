@@ -8,9 +8,9 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        return self.method1(l1, l2)
+        return self.__method1(l1, l2)
 
-    def method1(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def __method1(self, l1: ListNode, l2: ListNode) -> ListNode:
         if l1 is None:
             return l2
         if l2 is None:

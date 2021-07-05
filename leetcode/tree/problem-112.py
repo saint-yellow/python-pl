@@ -9,20 +9,20 @@ class TreeNode:
 
 class Solution:
     def hasPathSum(self, root: TreeNode, targetSum: int) -> bool:
-        return self.method1(root, targetSum)
+        return self.__method1(root, targetSum)
 
-    def method1(self, root: TreeNode, targetSum: int) -> bool:
+    def __method1(self, root: TreeNode, targetSum: int) -> bool:
         if not root:
             return False
 
         if not root.left and not root.right:
             return targetSum == root.val
 
-        left = self.method1(root.left, targetSum-root.val) 
-        right = self.method1(root.right, targetSum-root.val)
+        left = self.__method1(root.left, targetSum-root.val) 
+        right = self.__method1(root.right, targetSum-root.val)
         return left or right
 
-    def method2(self, root: TreeNode, targetSum: int) -> bool:
+    def __method2(self, root: TreeNode, targetSum: int) -> bool:
         if not root:
             return False
 
