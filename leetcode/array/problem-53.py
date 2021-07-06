@@ -1,10 +1,11 @@
 from typing import List
 
+
 class Solution:
     def maxSubArray(self, numbers: List[int]) -> int:
         return self.__method2(numbers)
 
-    # 基于动态规划的解法
+    # 基于动态规划的解法，具备常数级空间复杂度
     def __method1(self, numbers: List[int]) -> int:
         pre, ans = 0, numbers[0]
         for n in numbers:
@@ -12,7 +13,7 @@ class Solution:
             ans = max(ans, pre)
         return ans
 
-    # 基于动态规划的解法
+    # 基于动态规划的解法，具备线性级空间复杂度
     def __method2(self, numbers: List[int]) -> int:
         if len(numbers) == 1:
             return numbers[0]
