@@ -12,7 +12,7 @@ class TreeNode:
 
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
-        return self.__method1(root)
+        return self.__method2(root)
 
     # 递归
     def __method1(self, root: TreeNode) -> List[int]:
@@ -23,9 +23,29 @@ class Solution:
 
     # 迭代
     def __method2(self, root: TreeNode) -> List[int]:
-        pass
+        result = []
+        stack = []
+        currentNode = root
+
+        while currentNode or stack:
+            if currentNode:
+                stack.append(currentNode)
+                currentNode = currentNode.left
+            else:
+                currentNode = stack.pop()
+                result.append(currentNode.value)
+                currentNode = currentNode.right
+                
+        return result
 
     # 莫里斯遍历
     def __method3(self, root: TreeNode) -> List[int]:
         pass
+
+
+
+if __name__ == '__main__':
+    s = Solution()
+    tree = TreeNode(1, None, TreeNode(2, TreeNode(3), None))
+    print(s.inorderTraversal(tree))
 
