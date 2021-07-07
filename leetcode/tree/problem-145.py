@@ -12,7 +12,7 @@ class TreeNode:
 
 class Solution:
     def postorderTraversal(self, root: TreeNode) -> List[int]:
-        return self.__method2(root)
+        return self.__method3(root)
 
 
     # 递归
@@ -22,8 +22,7 @@ class Solution:
         else:
             return []
 
-
-
+    # 迭代
     def __method2(self, root: TreeNode) -> List[int]:
         result = []
 
@@ -39,6 +38,32 @@ class Solution:
             if node.right:
                 stack.append(node.right)
         result.reverse()
+        return result
+
+    def __method3(self, root: TreeNode) -> List[int]:
+        result: List[int] = []
+        stack: List[TreeNode] = []
+
+        if root:
+            stack.append(root)
+
+        while stack:
+            node: TreeNode = stack[-1]
+            if node:
+                stack.pop()
+                stack.append(node)
+                stack.append(None)
+                if node.right:
+                    stack.append(node.right)
+                if node.left:
+                    stack.append(node.left)
+            else:
+                stack.pop()
+
+                node = stack[-1]
+                result.append(node.value)
+                stack.pop()
+                
         return result
 
 

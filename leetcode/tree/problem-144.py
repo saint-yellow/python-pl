@@ -12,7 +12,7 @@ class TreeNode:
 
 class Solution:
     def preorderTraversal(self, root: TreeNode) -> List[int]:
-        return self.__method2(root)
+        return self.__method3(root)
 
 
     # 递归
@@ -36,6 +36,32 @@ class Solution:
                 stack.append(node.right)
             if node.left:
                 stack.append(node.left)
+        return result
+
+    def __method3(self, root: TreeNode) -> List[int]:
+        result: List[int] = []
+        stack: List[TreeNode] = []
+
+        if root:
+            stack.append(root)
+
+        while stack:
+            node: TreeNode = stack[-1]
+            if node:
+                stack.pop()
+                if node.right:
+                    stack.append(node.right)
+                if node.left:
+                    stack.append(node.left)
+
+                stack.append(node)
+                stack.append(None)
+            else:
+                stack.pop()
+
+                node = stack[-1]
+                result.append(node.value)
+                stack.pop()
         return result
 
 
