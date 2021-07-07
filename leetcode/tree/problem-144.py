@@ -49,6 +49,7 @@ class Solution:
             node: TreeNode = stack[-1]
             if node:
                 stack.pop()
+                
                 if node.right:
                     stack.append(node.right)
                 if node.left:
