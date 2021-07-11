@@ -1,4 +1,4 @@
-# LeetCode problem #21: 合并两个有序链表
+# LeetCode Problem Nr. 21: 合并两个有序链表
 
 class ListNode:
     def __init__(self, val:int = 0, next=None) -> None:

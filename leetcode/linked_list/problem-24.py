@@ -1,4 +1,4 @@
-# LeetCode problem #24: 反转链表
+# LeetCode Problem Nr. 24: 反转链表
 
 
 class ListNode:

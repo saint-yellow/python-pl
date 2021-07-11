@@ -1,4 +1,4 @@
-# LeetCode problem #34: 反转字符串
+# LeetCode Problem Nr. 34: 反转字符串
 
 from typing import List
 

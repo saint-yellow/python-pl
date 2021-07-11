@@ -1,4 +1,4 @@
-# LeetCode Problem #19: 删除链表的倒数第N个结点
+# LeetCode Problem Nr. 19: 删除链表的倒数第N个结点
 
 # Definition for singly-linked list.
 class ListNode:

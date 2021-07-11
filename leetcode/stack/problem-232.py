@@ -1,4 +1,4 @@
-# LeetCode problem #232: 用栈实现队列
+# LeetCode Problem Nr. 232: 用栈实现队列
 
 class MyQueue:
 

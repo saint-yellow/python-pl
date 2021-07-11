@@ -1,4 +1,4 @@
-# LeetCode problem #25: 合并两个排序的链表
+# LeetCode Problem Nr. 25: 合并两个排序的链表
 
 class ListNode:
     def __init__(self, val:int = 0, next=None) -> None:

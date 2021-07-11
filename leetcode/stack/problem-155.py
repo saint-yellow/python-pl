@@ -1,4 +1,4 @@
-# LeetCode problem #155: 最小栈
+# LeetCode Problem Nr. 155: 最小栈
 
 class MinStack:
 
