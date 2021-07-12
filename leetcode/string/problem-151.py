@@ -1,6 +1,12 @@
 class Solution:
-    def reverseWords(self, s: str) -> str:
-        pass
+    def reverseWords(self, string: str) -> str:
+        return self.__method1(string)
 
-    def __method1(self, s: str) -> str:
-        pass
+    # 基于Python语言特性的解法
+    def __method1(self, string: str) -> str:
+        if not string:
+            return ''
+        words = string.split()
+        words.reverse()
+        result = ' '.join(words)
+        return result
