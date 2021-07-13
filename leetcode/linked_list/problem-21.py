@@ -1,9 +1,6 @@
 # LeetCode Problem Nr. 21: 合并两个有序链表
 
-class ListNode:
-    def __init__(self, val:int = 0, next=None) -> None:
-        self.val = val
-        self.next = next
+from ds import ListNode
 
 
 class Solution:

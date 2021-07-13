@@ -1,8 +1,4 @@
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, value=0, next=None):
-        self.value = value
-        self.next = next
+from ds import ListNode
 
 
 class Solution:

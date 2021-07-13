@@ -2,17 +2,7 @@
 
 from typing import List
 
-
-class SinglyListNode:
-    def __init__(self, val: int, next=None):
-        self.val = val
-        self.next = next
-
-class DoublyListNode:
-    def __init__(self, val: int, prev=None, next=None):
-        self.val = val
-        self.prev = prev
-        self.next = next
+from ds import ListNode
 
 class MyLinkedList:
 
@@ -21,7 +11,7 @@ class MyLinkedList:
         Initialize your data structure here.
         """
         self.size = 0
-        self.sentinel = SinglyListNode(-1, None)
+        self.sentinel = ListNode(-1, None)
 
 
     def get(self, index: int) -> int:
@@ -44,7 +34,7 @@ class MyLinkedList:
         After the insertion, the new node will be the first node of the linked list.
         """
         oldHead = self.sentinel.next
-        newHead = SinglyListNode(val, oldHead)
+        newHead = ListNode(val, oldHead)
         self.sentinel.next = newHead
         self.size += 1
 
@@ -56,7 +46,7 @@ class MyLinkedList:
         node = self.sentinel
         for _ in range(self.size):
             node = node.next
-        node.next = SinglyListNode(val, None)
+        node.next = ListNode(val, None)
         self.size += 1
 
 
@@ -71,7 +61,7 @@ class MyLinkedList:
         for _ in range(index):
             node1 = node1.next
             node2 = node2.next
-        node1.next = SinglyListNode(val, node2)
+        node1.next = ListNode(val, node2)
         self.size += 1
 
     def deleteAtIndex(self, index: int) -> None:

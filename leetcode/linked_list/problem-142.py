@@ -1,7 +1,5 @@
-class ListNode:
-    def __init__(self, x: int) -> None:
-        self.val = x
-        self.next = None
+from ds import ListNode
+
 
 class Solution:
     def detectCycle(self, head: ListNode) -> ListNode:

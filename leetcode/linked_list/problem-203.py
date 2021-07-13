@@ -2,31 +2,7 @@
 
 from typing import List
 
-
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-def buildList(values: List[int]):
-    if not values:
-        return None
-
-    node = ListNode(-1)
-    head = node
-    for i in values:
-        node.next = ListNode(i, None)
-        node = node.next
-    return head.next
-
-def listAllValues(head: ListNode) -> List[int]:
-    result = []
-    while head:
-        result.append(head.val)
-        head = head.next
-    return result
-
+from ds import ListNode, buildList, listAllValues
 
 
 class Solution:
@@ -49,7 +25,6 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    # head = ListNode(1, ListNode(2, ListNode(6, ListNode(3, ListNode(4, ListNode(5, ListNode(6, None)))))))
     head = buildList([6,6,6,6])
     value = 6
     print(listAllValues(head))

@@ -1,8 +1,5 @@
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, x):
-        self.value = x
-        self.next = None
+from ds import ListNode
+
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
