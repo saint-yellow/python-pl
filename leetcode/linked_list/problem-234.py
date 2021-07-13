@@ -21,7 +21,7 @@ class Solution:
     
     def __method2(self, head: ListNode) -> bool:
         self.front_pointer = head
-        def recursively_check(current_node=head):
+        def recursively_check(current_node: ListNode):
             if current_node is not None:
                 if not recursively_check(current_node.next):
                     return False
@@ -30,7 +30,7 @@ class Solution:
                 self.front_pointer = self.front_pointer.next
             return True
 
-        return recursively_check()
+        return recursively_check(head)
 
     def __method3(self, head: ListNode) -> bool:
         if head is None:
