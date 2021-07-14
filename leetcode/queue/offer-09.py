@@ -1,4 +1,4 @@
-# 剑指Offer #09: 用栈实现队列
+# 剑指Offer Problem Nr. 09: 用栈实现队列
 
 class CQueue:
 
