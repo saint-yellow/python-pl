@@ -7,16 +7,14 @@ class Solution:
 
     # 基于栈的解法
     def __method1(self, numbers: List[int]) -> int:
-        if len(numbers) == 1:
-            return numbers[0]
-
-        while numbers:
+        n = len(numbers)
+        while n > 2:
             i = numbers.pop()
             j = numbers.pop()
             if i != j:
                 return i
-            else:
-                return self.__method1(numbers)
+            n -= 2
+        return numbers[0]
 
     # 基于双指针的解法
     def __method2(self, numbers: List[int]) -> int:
