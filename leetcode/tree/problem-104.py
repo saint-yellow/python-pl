@@ -1,12 +1,15 @@
 # LeetCode Problem Nr. 104: 二叉树的最大深度
 
-from ds import TreeNode
+from typing_extensions import TypeAlias
+
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         return self.__method2(root)
-
 
     # 自顶向下的解法
     def __method1(self, node: TreeNode, depth: int) -> int:
@@ -40,4 +43,3 @@ class Solution:
         # 一棵二叉树的最大深度 = 子树的最大深度 + 1 
         # 1代表根节点的深度
         return max(leftDepth, rightDepth) + 1
-

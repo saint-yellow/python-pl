@@ -1,6 +1,10 @@
 # LeetCode Problem Nr. 101: 对称的二叉树
 
-from ds import TreeNode
+from typing_extensions import TypeAlias
+
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
@@ -33,4 +37,3 @@ class Solution:
             queue.append(node1.right)
             queue.append(node2.left)
         return True
-

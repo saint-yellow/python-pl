@@ -2,7 +2,11 @@
 
 from typing import List
 
-from ds import TreeNode
+from typing_extensions import TypeAlias
+
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
@@ -13,7 +17,6 @@ class Solution:
         queue: List[TreeNode] = []
         if root:
             queue.append(root)
-        
         level = 0
         while queue:
             levelSize = len(queue)
@@ -36,7 +39,6 @@ class Solution:
         for n in numbers:
             if n % 2 != evenOrOdd:
                 return False
-            
         n = len(numbers)
         if evenOrOdd == 1:
             for i in range(1, n):

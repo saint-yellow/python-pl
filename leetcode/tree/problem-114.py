@@ -1,8 +1,10 @@
 # LeetCode Problem Nr. 114: 二叉树展开为链表
 
-from typing import List
+from typing_extensions import TypeAlias
 
-from ds import TreeNode
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
@@ -11,7 +13,6 @@ class Solution:
         Do not return anything, modify root in-place instead.
         """
         self.__method1(root)
-
 
     def __method1(self, root: TreeNode) -> None:
         values = TreeNode.preOrderTraversal(root)
@@ -24,12 +25,10 @@ class Solution:
             pointer.right = TreeNode(v)
             pointer = pointer.right
 
+    def __method2(self, root: TreeNode) -> None: ...
 
-    def __method2(self, root: TreeNode) -> None:
-        pass
+    def __method3(self, root: TreeNode) -> None: ...
 
-    def __method3(self, root: TreeNode) -> None:
-        pass
 
 if __name__ == '__main__':
     tree = TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(5, None, TreeNode(6)))

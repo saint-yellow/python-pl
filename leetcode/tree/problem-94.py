@@ -2,7 +2,11 @@
 
 from typing import List
 
-from ds import TreeNode
+from typing_extensions import TypeAlias
+
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
@@ -58,20 +62,12 @@ class Solution:
                 stack.pop()
         return result
 
-
-        
-
     # 莫里斯遍历
     def __method4(self, root: TreeNode) -> List[int]:
         pass
-
-
-
-
 
 
 if __name__ == '__main__':
     s = Solution()
     tree = TreeNode(1, None, TreeNode(2, TreeNode(3), None))
     print(s.inorderTraversal(tree))
-

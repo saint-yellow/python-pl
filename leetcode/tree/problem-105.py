@@ -2,7 +2,11 @@
 
 from typing import List
 
-from ds import TreeNode
+from typing_extensions import TypeAlias
+
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:

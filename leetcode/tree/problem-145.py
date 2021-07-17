@@ -2,13 +2,16 @@
 
 from typing import List
 
-from ds import TreeNode
+from typing_extensions import TypeAlias
+
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
     def postorderTraversal(self, root: TreeNode) -> List[int]:
         return self.__method3(root)
-
 
     # 递归
     def __method1(self, root: TreeNode) -> List[int]:
@@ -58,7 +61,6 @@ class Solution:
                 node = stack[-1]
                 result.append(node.value)
                 stack.pop()
-                
         return result
 
 

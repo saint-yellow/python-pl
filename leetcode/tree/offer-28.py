@@ -1,6 +1,10 @@
 # 剑指Offer Problem Nr. 28: 对称的二叉树
 
-from ds import TreeNode
+from typing_extensions import TypeAlias
+
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
@@ -14,7 +18,6 @@ class Solution:
         if not p or not q:
             return False
         return p.val == q.val and self.__method1(p.left, q.right) and self.__method1(p.right, q.left)
-
 
     # 迭代
     def __method2(self, root: TreeNode) -> bool:

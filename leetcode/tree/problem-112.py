@@ -1,6 +1,10 @@
 # LeetCode Problem Nr. 112: 路径总和
 
-from ds import TreeNode
+from typing_extensions import TypeAlias
+
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
@@ -40,5 +44,3 @@ class Solution:
                     nodeQueue.append(node.right)
                     valueQueue.append(value+node.right.val)
         return False
-            
-        

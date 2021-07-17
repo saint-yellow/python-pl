@@ -2,13 +2,16 @@
 
 from typing import List
 
-from ds import TreeNode
+from typing_extensions import TypeAlias
+
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         return self.__method1(root)
-
 
     # 基于广度优先遍历的解法
     def __method1(self, root: TreeNode) -> List[List[int]]:
@@ -42,7 +45,7 @@ class Solution:
         while queue:
             levelSize = len(queue)
             currentLevel = []
-            for _ in range(currentLevel):
+            for _ in range(levelSize):
                 node: TreeNode = queue.popleft()
                 currentLevel.append(node.val)
                 if node.left:
@@ -56,6 +59,7 @@ class Solution:
     # 基于深度优先遍历的解法
     def __method3(self, root: TreeNode) -> List[List[int]]:
         result: List[List[int]] = []
+
         def dfs(node: TreeNode, level: int) -> None:
             if not node:
                 return
@@ -64,7 +68,6 @@ class Solution:
             result[level].append(node.val)
             dfs(node.left, level+1)
             dfs(node.right, level+1)
-
 
         if not root:
             return result

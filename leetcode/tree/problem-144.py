@@ -2,13 +2,16 @@
 
 from typing import List
 
-from ds import TreeNode
+from typing_extensions import TypeAlias
+
+from ds import BinaryNode
+
+TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
     def preorderTraversal(self, root: TreeNode) -> List[int]:
         return self.__method3(root)
-
 
     # 递归
     def __method1(self, root: TreeNode) -> List[int]:
@@ -43,8 +46,7 @@ class Solution:
         while stack:
             node: TreeNode = stack[-1]
             if node:
-                stack.pop()
-                
+                stack.pop()             
                 if node.right:
                     stack.append(node.right)
                 if node.left:
