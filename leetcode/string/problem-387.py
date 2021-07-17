@@ -2,7 +2,7 @@ class Solution:
     def firstUniqChar(self, s: str) -> int:
         return self.__method1(s)
 
-
+    # 基于哈希表的解法
     def __method1(self, s: str) -> int:
         if not s:
             return -1
@@ -16,8 +16,8 @@ class Solution:
         u = [v[0] for v in d.values() if len(v) == 1]
         return -1 if not u else min(u)
 
+
 if __name__ == '__main__':
     s = Solution()
     print(s.firstUniqChar('leetcode'))
     print(s.firstUniqChar('loveleetcode'))
-

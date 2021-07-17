@@ -1,3 +1,5 @@
+# 剑指Offer Problem Nr. 52: 两个链表的第一个公共节点
+
 from typing_extensions import TypeAlias
 
 from ds import SinglyLinkedNode

@@ -16,6 +16,10 @@ class Solution:
             i += 1
         return -1
 
+    def __method2(self, numbers: List[int]) -> int:
+        sum1 = sum(numbers)
+        sum2 = sum(range(len(numbers)+1))
+        return sum2 - sum1
 
 
 if __name__ == '__main__':
