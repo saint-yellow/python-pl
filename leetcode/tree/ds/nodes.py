@@ -29,3 +29,9 @@ class BinaryNode:
 
 def buildTree(values: List[int]) -> BinaryNode: ...
 def listAllValues(root: BinaryNode) -> List[int]: ...
+
+
+class NAryNode:
+    def __init__(self, val: int = 0, children: List = None):
+        self.val = val
+        self.children = children

@@ -1,3 +1,3 @@
-from .nodes import BinaryNode
+from .nodes import BinaryNode, NAryNode
 
-__all__ = ['BinaryNode']
+__all__ = ['BinaryNode', 'NAryNode']
