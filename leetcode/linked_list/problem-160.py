@@ -1,10 +1,13 @@
-from ds import ListNode
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         return self.__method2(headA, headB)
-
 
     # 基于哈希集合的解法
     def __method1(self, headA: ListNode, headB: ListNode) -> ListNode:

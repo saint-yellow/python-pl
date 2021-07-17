@@ -1,7 +1,7 @@
-from .nodes import ListNode, buildList, listAllValues
+from .nodes import ListNode, buildSinglyLinkedList, listAllValues
 
 __all__ = [
     'ListNode',
-    'buildList',
+    'buildSinglyLinkedList',
     'listAllValues'
 ]

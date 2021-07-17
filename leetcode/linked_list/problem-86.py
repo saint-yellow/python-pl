@@ -1,8 +1,10 @@
 # LeetCode Problem Nr. 86: 分割链表
 
-from typing import List
+from typing_extensions import TypeAlias
 
-from ds import ListNode
+from ds import SinglyLinkedNode, buildSinglyLinkedList
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:
@@ -28,10 +30,9 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    list1 = ListNode(1, ListNode(4, ListNode(3, ListNode(2, ListNode(5, ListNode(2, None))))))
+    list1 = buildSinglyLinkedList([1, 4, 3, 2, 5, 2])
     print(list1.listValues())
     print(s.partition(list1, 3).listValues())
     list2 = ListNode(2, ListNode(1, None))
     print(list2.listValues())
     print(s.partition(list2, 2).listValues())
-

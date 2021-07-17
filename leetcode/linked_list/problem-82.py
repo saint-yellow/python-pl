@@ -1,12 +1,15 @@
 # LeetCode Problem Nr. 82: 删除排序链表中的重复元素II
 
-from ds import ListNode, buildList, listAllValues
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode, buildSinglyLinkedList, listAllValues
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         return self.__method1(head)
-
 
     def __method1(self, head: ListNode) -> ListNode:
         if not head:
@@ -23,10 +26,9 @@ class Solution:
                 pointer = pointer.next
         return sentinel.next
 
+
 if __name__ == '__main__':
-    head = buildList([1,2,3,3,4,4,5])
+    head = buildSinglyLinkedList([1, 2, 3, 3, 4, 4, 5])
     print(listAllValues(head))
     s = Solution()
     print(listAllValues(s.deleteDuplicates(head)))
-
-

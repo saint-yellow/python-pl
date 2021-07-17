@@ -1,6 +1,10 @@
 # LeetCode Problem Nr. 21: 合并两个有序链表
 
-from ds import ListNode
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:

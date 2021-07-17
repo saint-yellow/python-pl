@@ -1,8 +1,10 @@
 # LeetCode Problem Nr. 203: 移除链表元素
 
-from typing import List
+from typing_extensions import TypeAlias
 
-from ds import ListNode, buildList, listAllValues
+from ds import SinglyLinkedNode, buildSinglyLinkedList, listAllValues
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:
@@ -25,8 +27,7 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    head = buildList([6,6,6,6])
+    head = buildSinglyLinkedList([6, 6, 6, 6])
     value = 6
     print(listAllValues(head))
     print(listAllValues(s.removeElements(head, value)))
-        

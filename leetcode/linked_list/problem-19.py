@@ -1,12 +1,15 @@
 # LeetCode Problem Nr. 19: 删除链表的倒数第N个结点
 
-from ds import ListNode
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
         return self.__method1(head, n)
-
 
     # 遍历两次
     def __method1(self, head: ListNode, n: int) -> ListNode:
@@ -17,7 +20,6 @@ class Solution:
             current = current.next
         current.next = current.next.next
         return sentinel.next
-
 
     def __getLength(self, head: ListNode) -> int:
         count = 0

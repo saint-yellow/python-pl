@@ -1,11 +1,14 @@
-from ds import ListNode
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:
-    def deleteNode(self, node: ListNode):
+    def deleteNode(self, node: ListNode) -> None:
         """
-        :type node: ListNode
-        :rtype: void Do not return anything, modify node in-place instead.
+        Do not return anything, modify node in-place instead.
         """
 
         node.value = node.next.value

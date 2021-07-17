@@ -1,27 +1,11 @@
 # LeetCode Problem Nr. 328: 奇偶链表
 
-from typing import List
+from typing_extensions import TypeAlias
 
-from ds import ListNode
+from ds import SinglyLinkedNode, buildSinglyLinkedList, listAllValues
 
+ListNode: TypeAlias = SinglyLinkedNode
 
-def buildList(values: List[int]):
-    if not values:
-        return None
-
-    node = ListNode(-1)
-    head = node
-    for i in values:
-        node.next = ListNode(i, None)
-        node = node.next
-    return head.next
-
-def listAllValues(head: ListNode) -> List[int]:
-    result = []
-    while head:
-        result.append(head.val)
-        head = head.next
-    return result
 
 class Solution:
     def oddEvenList(self, head: ListNode) -> ListNode:
@@ -45,7 +29,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    listHead = buildList([2,1,3,5,6,4,7])
+    listHead = buildSinglyLinkedList([2, 1, 3, 5, 6, 4, 7])
     print(listAllValues(listHead))
 
     s = Solution()

@@ -2,7 +2,12 @@
 
 from typing import List
 
-from ds import ListNode
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
+
 
 class MyLinkedList:
 
@@ -12,7 +17,6 @@ class MyLinkedList:
         """
         self.size = 0
         self.sentinel = ListNode(-1, None)
-
 
     def get(self, index: int) -> int:
         """
@@ -27,7 +31,6 @@ class MyLinkedList:
             node = node.next
         return node.val
 
-
     def addAtHead(self, val: int) -> None:
         """
         Add a node of value val before the first element of the linked list. \n
@@ -38,7 +41,6 @@ class MyLinkedList:
         self.sentinel.next = newHead
         self.size += 1
 
-
     def addAtTail(self, val: int) -> None:
         """
         Append a node of value val to the last element of the linked list.
@@ -48,7 +50,6 @@ class MyLinkedList:
             node = node.next
         node.next = ListNode(val, None)
         self.size += 1
-
 
     def addAtIndex(self, index: int, val: int) -> None:
         """
@@ -111,7 +112,3 @@ if __name__ == '__main__':
 
     linkedList.deleteAtIndex(2)
     print(linkedList.listAllValues())
-
-
-
-

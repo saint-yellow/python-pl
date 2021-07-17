@@ -1,4 +1,8 @@
-from ds import ListNode
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:
@@ -12,13 +16,10 @@ class Solution:
 
         slow = head
         fast = slow.next
-        while slow != fast:
+        while slow != fast and fast.next:
             slow = slow.next
-            try:
-                fast = fast.next.next
-                if fast is None:
-                    return False
-            except:
+            fast = fast.next.next
+            if fast is None:
                 return False
         return True
 

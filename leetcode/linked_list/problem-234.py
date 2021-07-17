@@ -1,10 +1,13 @@
-from ds import ListNode
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
         return self.__method3(head)
-
 
     def __method1(self, head: ListNode) -> bool:
         values = []
@@ -14,9 +17,9 @@ class Solution:
             current_node = current_node.next
         return values == values[::-1]
 
-    
     def __method2(self, head: ListNode) -> bool:
         self.front_pointer = head
+
         def recursively_check(current_node: ListNode):
             if current_node is not None:
                 if not recursively_check(current_node.next):
@@ -48,7 +51,7 @@ class Solution:
 
         # 还原链表并返回结果
         first_half_end.next = self.__reverse_list(second_half_start)
-        return result    
+        return result
 
     def __end_of_first_half(self, head):
         fast = head

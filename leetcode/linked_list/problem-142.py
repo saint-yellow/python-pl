@@ -1,4 +1,8 @@
-from ds import ListNode
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:
@@ -18,5 +22,5 @@ class Solution:
         fast = head
         while fast != slow:
             fast, slow = fast.next, slow.next
-            
+
         return fast

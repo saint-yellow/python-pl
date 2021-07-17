@@ -1,7 +1,10 @@
 # LeetCode Problem Nr. 24: 反转链表
 
+from typing_extensions import TypeAlias
 
-from ds import ListNode
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:

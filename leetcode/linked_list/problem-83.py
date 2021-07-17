@@ -1,10 +1,13 @@
-from ds import ListNode
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
 
 
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         return self.__method1(head)
-
 
     def __method1(self, head: ListNode) -> ListNode:
         currentNode = head

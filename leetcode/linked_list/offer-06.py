@@ -1,7 +1,13 @@
 # 剑指Offer Problem Nr. 09: 从尾到头打印链表
 
-from ds import ListNode
 from typing import List
+
+from typing_extensions import TypeAlias
+
+from ds import SinglyLinkedNode
+
+ListNode: TypeAlias = SinglyLinkedNode
+
 
 class Solution:
     def reversePrint(self, head: ListNode) -> List[int]:
