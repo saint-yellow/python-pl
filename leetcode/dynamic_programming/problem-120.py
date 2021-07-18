@@ -29,12 +29,12 @@ class Solution:
 
     # 基于动态规划的解法，针对空间复杂度进行优化
     def __method2(self, triangle: List[List[int]]) -> int:
-        pass
+        ...
 
     # 基于动态规划的解法
     def __method3(self, triangle: List[List[int]]) -> int:
         # to-do: 自顶向上的递推
-        pass
+        ...
 
 
 if __name__ == "__main__":

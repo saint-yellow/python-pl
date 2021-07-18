@@ -8,7 +8,7 @@ class Solution:
         return self.__method1(obstacleGrid)
 
     def __method1(self, obstacleGrid: List[List[int]]) -> int:
-        pass
+        ...
 
 
 if __name__ == "__main__":

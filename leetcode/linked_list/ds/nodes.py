@@ -3,12 +3,12 @@ from typing import List
 
 # Definition for singly-linked list.
 class SinglyLinkedNode:
-    def __init__(self, val: int = 0, next: 'SinglyLinkedNode' = None):
+    def __init__(self, val: int = 0, next: "SinglyLinkedNode" = None):
         self.val: int = val
         self.next: SinglyLinkedNode = next
 
     @staticmethod
-    def listAllValues(head: 'SinglyLinkedNode') -> List[int]:
+    def listAllValues(head: "SinglyLinkedNode") -> List[int]:
         result = []
         while head:
             result.append(head.val)
@@ -23,12 +23,13 @@ class DoublyLinkedNode:
         self.next = next
 
     @staticmethod
-    def listAllValues(head: 'DoublyLinkedNode') -> List[int]:
+    def listAllValues(head: "DoublyLinkedNode") -> List[int]:
         result = []
         while head:
             result.append(head.val)
             head = head.next
         return result
+
 
 def buildSinglyLinkedList(values: List[int]):
     if not values:

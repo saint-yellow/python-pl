@@ -15,10 +15,10 @@ class Solution:
         return dp[n - 1]
 
     def __method2(self, n: int) -> int:
-        pass
+        ...
 
     def __method3(self, n: int) -> int:
-        pass
+        ...
 
     def __method4(self, n: int) -> int:
-        pass
+        ...

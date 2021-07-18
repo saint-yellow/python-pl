@@ -6,7 +6,7 @@ from ds import SinglyLinkedNode
 
 
 class Node(SinglyLinkedNode):
-    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
+    def __init__(self, x: int, next: "Node" = None, random: "Node" = None):
         self.val: int = x
         self.next: Node = next
         self.random: Node = random
@@ -32,3 +32,12 @@ class Solution:
             pointer = pointer.next
 
         return hasMap(head, None)
+
+    def __method2(self, head: Node) -> Node:
+        ...
+
+    def __method3(self, head: Node) -> Node:
+        ...
+
+    def __method4(self, head: Node) -> Node:
+        ...

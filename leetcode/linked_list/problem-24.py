@@ -33,4 +33,4 @@ class Solution:
         return ret
 
     def __method3(self, head: ListNode) -> ListNode:
-        pass
+        ...

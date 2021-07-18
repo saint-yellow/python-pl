@@ -38,4 +38,4 @@ class Solution:
 
     # 基于位运算的解法
     def __method3(self, numbers: List[int]) -> int:
-        pass
+        ...

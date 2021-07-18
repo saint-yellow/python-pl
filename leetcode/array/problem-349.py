@@ -26,7 +26,7 @@ class Solution:
         return result
 
     def __method2(self, numbers1: List[int], numbers2: List[int]) -> List[int]:
-        pass
+        ...
 
 
 if __name__ == "__main__":

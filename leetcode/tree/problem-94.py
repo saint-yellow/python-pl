@@ -64,7 +64,7 @@ class Solution:
 
     # 莫里斯遍历
     def __method4(self, root: TreeNode) -> List[int]:
-        pass
+        ...
 
 
 if __name__ == "__main__":

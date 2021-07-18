@@ -30,4 +30,4 @@ class Solution:
         return helper(0, len(inorder) - 1)
 
     def __method2(self, inorder: List[int], postorder: List[int]) -> TreeNode:
-        pass
+        ...

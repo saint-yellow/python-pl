@@ -47,7 +47,7 @@ class Solution:
 
     # 基于堆排序的选择方法
     def __method2(self, n: List[int], k: int) -> int:
-        pass
+        ...
 
 
 if __name__ == "__main__":

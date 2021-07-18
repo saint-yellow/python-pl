@@ -14,4 +14,4 @@ class Solution:
 
     # 基于动态规划的解法
     def __method2(self, prices: List[int]) -> int:
-        pass
+        ...
