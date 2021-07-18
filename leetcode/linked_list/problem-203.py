@@ -25,7 +25,7 @@ class Solution:
         return start.next
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     head = buildSinglyLinkedList([6, 6, 6, 6])
     value = 6

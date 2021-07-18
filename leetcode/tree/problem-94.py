@@ -67,7 +67,7 @@ class Solution:
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     tree = TreeNode(1, None, TreeNode(2, TreeNode(3), None))
     print(s.inorderTraversal(tree))

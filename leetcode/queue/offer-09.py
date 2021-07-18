@@ -1,5 +1,6 @@
 # 剑指Offer Problem Nr. 09: 用栈实现队列
 
+
 class CQueue:
     def __init__(self):
         self.input_stack = []

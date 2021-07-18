@@ -13,14 +13,14 @@ class Solution:
         if target < 3:
             return result
 
-        limit = (target+1) // 2
-        sequence = range(1, limit+1)
-        for i in range(0, limit+1):
-            for j in range(i, target+1):
-                if sum(sequence[i:j + 1]) == target:
-                    result.append(list(sequence[i:j + 1]))
+        limit = (target + 1) // 2
+        sequence = range(1, limit + 1)
+        for i in range(0, limit + 1):
+            for j in range(i, target + 1):
+                if sum(sequence[i : j + 1]) == target:
+                    result.append(list(sequence[i : j + 1]))
                     break
-                if sum(sequence[i:j + 1]) > target:
+                if sum(sequence[i : j + 1]) > target:
                     break
 
         return result
@@ -32,7 +32,7 @@ class Solution:
         while left < right:
             total = (left + right) * (right - left + 1) / 2
             if total == target:
-                result.append([i for i in range(left, right+1)])
+                result.append([i for i in range(left, right + 1)])
                 left += 1
             elif total < target:
                 right += 1
@@ -41,6 +41,6 @@ class Solution:
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.findContinuousSequence(20))

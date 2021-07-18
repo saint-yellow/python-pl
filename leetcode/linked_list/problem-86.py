@@ -28,7 +28,7 @@ class Solution:
         return smallHead.next
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     list1 = buildSinglyLinkedList([1, 4, 3, 2, 5, 2])
     print(list1.listValues())

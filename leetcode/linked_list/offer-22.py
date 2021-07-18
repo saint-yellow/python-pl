@@ -23,7 +23,7 @@ class Solution:
         return slow
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     linkedList = buildSinglyLinkedList([1, 2, 3, 4, 5])
     s = Solution()
     node = s.getKthFromEnd(linkedList, 2)

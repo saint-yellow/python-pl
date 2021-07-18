@@ -9,7 +9,7 @@ class Solution:
 
     def __method1(self, s: str) -> str:
         if not s:
-            return ' '
+            return " "
 
         d: Dict[int, List[int]] = {}
 
@@ -22,11 +22,11 @@ class Solution:
         for k in d.keys():
             if len(d[k]) == 1:
                 return k
-        return ' '
+        return " "
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
-    print(s.firstUniqChar('leetcode'))
-    print(s.firstUniqChar('loveleetcode'))
-    print(s.firstUniqChar('abaccdeff'))
+    print(s.firstUniqChar("leetcode"))
+    print(s.firstUniqChar("loveleetcode"))
+    print(s.firstUniqChar("abaccdeff"))

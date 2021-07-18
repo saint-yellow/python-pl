@@ -15,15 +15,17 @@ class Solution:
         for i in range(1, n):
             for j in range(n):
                 if j == 0:
-                    matrix[i][j] += min(matrix[i-1][j], matrix[i-1][j+1])
-                elif j == n-1:
-                    matrix[i][j] += min(matrix[i-1][j-1], matrix[i-1][j])
+                    matrix[i][j] += min(matrix[i - 1][j], matrix[i - 1][j + 1])
+                elif j == n - 1:
+                    matrix[i][j] += min(matrix[i - 1][j - 1], matrix[i - 1][j])
                 else:
-                    matrix[i][j] += min(matrix[i-1][j-1], matrix[i-1][j], matrix[i-1][j+1])
-        return min(matrix[n-1])
+                    matrix[i][j] += min(
+                        matrix[i - 1][j - 1], matrix[i - 1][j], matrix[i - 1][j + 1]
+                    )
+        return min(matrix[n - 1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
-    print(s.minFallingPathSum([[2,1,3],[6,5,4],[7,8,9]]))
-    print(s.minFallingPathSum([[-19,57],[-40,-5]]))
+    print(s.minFallingPathSum([[2, 1, 3], [6, 5, 4], [7, 8, 9]]))
+    print(s.minFallingPathSum([[-19, 57], [-40, -5]]))

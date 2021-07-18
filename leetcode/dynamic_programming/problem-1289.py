@@ -14,13 +14,13 @@ class Solution:
         n = len(arr)
         for i in range(1, n):
             for j in range(n):
-                arr[i][j] += min(arr[i-1][:j]+arr[i-1][j+1:])
+                arr[i][j] += min(arr[i - 1][:j] + arr[i - 1][j + 1 :])
         print(arr)
-        return min(arr[n-1])
+        return min(arr[n - 1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.minFallingPathSum([[1]]))
-    print(s.minFallingPathSum([[1,2],[3,4]]))
-    print(s.minFallingPathSum([[1,2,3],[4,5,6],[7,8,9]]))
+    print(s.minFallingPathSum([[1, 2], [3, 4]]))
+    print(s.minFallingPathSum([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))

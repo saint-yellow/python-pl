@@ -39,6 +39,7 @@ class Solution:
             return result
 
         from collections import deque
+
         queue = deque()
         queue.append(root)
 
@@ -53,7 +54,7 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
             result.append(currentLevel)
-            
+
         return result
 
     # 基于深度优先遍历的解法
@@ -63,11 +64,11 @@ class Solution:
         def dfs(node: TreeNode, level: int) -> None:
             if not node:
                 return
-            if len(result) < level+1:
+            if len(result) < level + 1:
                 result.append([])
             result[level].append(node.val)
-            dfs(node.left, level+1)
-            dfs(node.right, level+1)
+            dfs(node.left, level + 1)
+            dfs(node.right, level + 1)
 
         if not root:
             return result

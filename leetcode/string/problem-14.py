@@ -7,7 +7,7 @@ class Solution:
 
     def __method1(self, strings: List[str]) -> str:
         if not strings:
-            return ''
+            return ""
 
         strings.sort()
         shortest = strings[0]
@@ -16,12 +16,11 @@ class Solution:
         i = 0
         while i < len(shortest) and shortest[i] == longest[i]:
             i += 1
-        
+
         return shortest[:i]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     strings = ["flowers", "fish", "flight"]
     s = Solution()
     print(s.longestCommonPrefix(strings))
-

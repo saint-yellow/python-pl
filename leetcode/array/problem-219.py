@@ -16,16 +16,15 @@ class Solution:
             if v not in d:
                 d[v] = i
             else:
-                if abs(d[v]-i) <= k:
+                if abs(d[v] - i) <= k:
                     return True
                 else:
                     d[v] = i
         return False
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.containsNearbyDuplicate([1, 2, 3, 1], 3))
     print(s.containsNearbyDuplicate([1, 0, 1, 1], 1))
-    print(s.containsNearbyDuplicate([1,2,3,1,2,3], 2))
+    print(s.containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2))

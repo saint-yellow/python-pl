@@ -19,7 +19,7 @@ class Solution:
     # 基于双指针的解法
     def __method2(self, numbers: List[int]) -> int:
         n = len(numbers)
-        i, j = n-1, n-2
+        i, j = n - 1, n - 2
         while i > 0:
             if numbers[i] != numbers[j]:
                 return numbers[j]
@@ -34,7 +34,7 @@ class Solution:
         while low < high:
             middle = low + (high - low) // 2
             halves_are_even = (high - middle) % 2 == 0
-            if numbers[middle+1] == numbers[middle]:
+            if numbers[middle + 1] == numbers[middle]:
                 if halves_are_even:
                     low = middle + 2
                 else:
@@ -55,9 +55,8 @@ class Solution:
             middle = low + (high - low) // 2
             if middle % 2 == 1:
                 middle -= 1
-            if numbers[middle] == numbers[middle+1]:
+            if numbers[middle] == numbers[middle + 1]:
                 low = middle + 2
             else:
                 high = middle
         return numbers[low]
-

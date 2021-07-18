@@ -17,7 +17,11 @@ class Solution:
             return True
         if not p or not q:
             return False
-        return p.val == q.val and self.__method1(p.left, q.right) and self.__method1(p.right, q.left)
+        return (
+            p.val == q.val
+            and self.__method1(p.left, q.right)
+            and self.__method1(p.right, q.left)
+        )
 
     # 迭代
     def __method2(self, root: TreeNode) -> bool:

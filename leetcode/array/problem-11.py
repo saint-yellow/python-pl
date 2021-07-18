@@ -6,7 +6,7 @@ class Solution:
         return self.__method1(height)
 
     def __method1(self, height: List[int]) -> int:
-        left, right = 0, len(height)-1
+        left, right = 0, len(height) - 1
         area = min(height[left], height[right]) * (right - left)
         while left < right:
             if height[left] <= height[right]:

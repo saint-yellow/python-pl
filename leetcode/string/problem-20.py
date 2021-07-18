@@ -2,12 +2,11 @@ class Solution:
     def isValid(self, s: str) -> bool:
         return self.__method1(s)
 
-
     def __method1(self, s: str) -> bool:
         mapping = {
-            '}': '{',
-            ']': '[',
-            ')': '(',
+            "}": "{",
+            "]": "[",
+            ")": "(",
         }
         stack = []
 
@@ -20,5 +19,3 @@ class Solution:
                 return False
 
         return stack == []
-
-

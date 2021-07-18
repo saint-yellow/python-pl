@@ -13,10 +13,8 @@ class Solution:
         slow = 1
         fast = 1
         while fast < length:
-            if numbers[fast] != numbers[fast-1]:
+            if numbers[fast] != numbers[fast - 1]:
                 numbers[slow] = numbers[fast]
                 slow += 1
             fast += 1
         return slow
-
-

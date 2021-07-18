@@ -6,7 +6,7 @@ class Solution:
         return self.__method1(numbers)
 
     def __method1(self, numbers: List[int]) -> int:
-        
+
         # 或者：
         # numbers = sorted(numbers)
         # return numbers[-1] * numbers[-2] - numbers[0] * numbers[1]

@@ -23,11 +23,11 @@ class Solution:
             value = postorder.pop()
             index = mapper[value]
             root = TreeNode(value, None, None)
-            root.right = helper(index+1, rightIndex)
-            root.left = helper(leftIndex, index-1)
+            root.right = helper(index + 1, rightIndex)
+            root.left = helper(leftIndex, index - 1)
             return root
 
-        return helper(0, len(inorder)-1)
+        return helper(0, len(inorder) - 1)
 
     def __method2(self, inorder: List[int], postorder: List[int]) -> TreeNode:
         pass

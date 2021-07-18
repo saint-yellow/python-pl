@@ -30,6 +30,6 @@ class Solution:
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
-    print(s.intersect([1,2,2,1], [2,2]))
+    print(s.intersect([1, 2, 2, 1], [2, 2]))

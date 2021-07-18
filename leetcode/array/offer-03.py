@@ -25,13 +25,13 @@ class Solution:
 
         numbers.sort()
         i, n = 0, len(numbers)
-        while i <= n-2:
-            if numbers[i] == numbers[i+1]:
+        while i <= n - 2:
+            if numbers[i] == numbers[i + 1]:
                 return numbers[i]
             i += 1
         return -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.findRepeatNumber([2, 3, 1, 0, 2, 5, 3]))

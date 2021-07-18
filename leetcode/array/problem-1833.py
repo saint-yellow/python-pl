@@ -5,7 +5,6 @@ class Solution:
     def maxIceCream(self, costs: List[int], coins: int) -> int:
         return self.__method1(costs, coins)
 
-
     # 基于排序和贪心策略的解法
     def __method1(self, costs: List[int], coins: int) -> int:
         costs = sorted(costs)

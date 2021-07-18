@@ -11,7 +11,7 @@ class Solution:
     def __method1(self, numbers: List[int]) -> int:
         pre, ans = 0, numbers[0]
         for n in numbers:
-            pre = max(pre+n, n)
+            pre = max(pre + n, n)
             ans = max(ans, pre)
         return ans
 
@@ -21,5 +21,5 @@ class Solution:
             return numbers[0]
         f = [numbers[0]]
         for i in range(1, len(numbers)):
-            f.append(max(f[i-1]+numbers[i], numbers[i]))
+            f.append(max(f[i - 1] + numbers[i], numbers[i]))
         return max(f)

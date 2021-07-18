@@ -32,7 +32,7 @@ class Solution:
             nextNode = head.next
             head.next = previousNode
             head = nextNode
-        
+
         result = []
         while head:
             result.append(head.val)

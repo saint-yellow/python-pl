@@ -11,7 +11,7 @@ class Solution:
         if not numbers:
             return numbers
 
-        left, right = 0, len(numbers)-1
+        left, right = 0, len(numbers) - 1
         while left <= right:
             a, b = numbers[left] % 2, numbers[right] % 2
             if a == 1 and b == 0:
@@ -28,7 +28,7 @@ class Solution:
         return numbers
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     numbers = [2, 16, 3, 5, 13, 1, 16, 1, 12, 18, 11, 8, 11, 11, 5, 1]
     print(numbers)
 

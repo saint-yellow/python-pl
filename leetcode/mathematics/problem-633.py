@@ -4,10 +4,11 @@ class Solution:
 
     def __method1(self, number: int) -> bool:
         from math import sqrt
+
         left = 0
         right = int(sqrt(number))
         while left <= right:
-            total = left*left + right*right
+            total = left * left + right * right
             if total == number:
                 return True
             elif total < number:
@@ -17,6 +18,6 @@ class Solution:
         return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.judgeSquareSum(1))

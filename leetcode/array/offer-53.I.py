@@ -47,7 +47,7 @@ class Solution:
         if not numbers:
             return -1
 
-        left, right = 0, len(numbers)-1
+        left, right = 0, len(numbers) - 1
         while left <= right:
             middle = (left + right) // 2
             if target == numbers[middle]:
@@ -59,6 +59,6 @@ class Solution:
         return -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.search([5, 7, 7, 8, 8, 10], 8))

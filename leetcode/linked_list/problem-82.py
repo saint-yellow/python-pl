@@ -27,7 +27,7 @@ class Solution:
         return sentinel.next
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     head = buildSinglyLinkedList([1, 2, 3, 3, 4, 4, 5])
     print(listAllValues(head))
     s = Solution()

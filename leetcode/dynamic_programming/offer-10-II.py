@@ -1,6 +1,6 @@
 # LeetCode Problem Nr. 10-II: 青蛙跳台阶问题
 
-SUP = 10**9+7
+SUP = 10 ** 9 + 7
 
 
 class Solution:
@@ -14,11 +14,11 @@ class Solution:
         p, q = 1, 1
         i = 2
         while i <= n:
-            p, q = q, p+q
+            p, q = q, p + q
             i += 1
         return q % SUP
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.numWays(7))

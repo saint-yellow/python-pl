@@ -7,10 +7,10 @@ class Solution:
 
     def __method1(self, tokens: List[str]) -> int:
         mapping = {
-            "+": lambda a, b: a+b,
-            "-": lambda a, b: a-b,
-            "*": lambda a, b: a*b,
-            "/": lambda a, b: int(a/b),
+            "+": lambda a, b: a + b,
+            "-": lambda a, b: a - b,
+            "*": lambda a, b: a * b,
+            "/": lambda a, b: int(a / b),
         }
 
         stack = []
@@ -23,5 +23,5 @@ class Solution:
                 stack.append(n)
             else:
                 stack.append(int(t))
-                
+
         return stack[-1]

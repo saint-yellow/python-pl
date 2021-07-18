@@ -28,7 +28,7 @@ class Solution:
         return oddHead
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     listHead = buildSinglyLinkedList([2, 1, 3, 5, 6, 4, 7])
     print(listAllValues(listHead))
 

@@ -12,15 +12,15 @@ class Solution:
         n = len(numbers)
 
         def findTarget(numbers: List[int], length: int, target: int) -> int:
-            left, right = 0, length-1
+            left, right = 0, length - 1
             while left <= right:
-                middle = (left+right)//2
+                middle = (left + right) // 2
                 if target == numbers[middle]:
                     return middle
                 elif target < numbers[middle]:
-                    right = middle-1
+                    right = middle - 1
                 else:
-                    left = middle+1
+                    left = middle + 1
             return -1
 
         t = findTarget(numbers, n, target)
@@ -29,16 +29,16 @@ class Solution:
         first = t
         second = t
         while first >= 0:
-            if first-1 >= 0 and numbers[first-1] == numbers[first]:
+            if first - 1 >= 0 and numbers[first - 1] == numbers[first]:
                 first -= 1
             else:
                 break
         while second < n:
-            if second+1 < n and numbers[second+1] == numbers[second]:
+            if second + 1 < n and numbers[second + 1] == numbers[second]:
                 second += 1
             else:
                 break
-        
+
         return [first, second]
 
     def __method2(self, numbers: List[int], target: int) -> List[int]:
@@ -56,7 +56,7 @@ class Solution:
         return [result[0], result[-1]]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.searchRange([5, 7, 7, 8, 8, 10], 8))
     print(s.searchRange([5, 7, 7, 8, 8, 10], 10))

@@ -1,12 +1,10 @@
 class MyCircularDeque:
-
     def __init__(self, k: int):
         """
         Initialize your data structure here. Set the size of the deque to be k.
         """
         self.deque = []
         self.capacity = k
-        
 
     def insertFront(self, value: int) -> bool:
         """
@@ -16,8 +14,6 @@ class MyCircularDeque:
             return False
         self.deque.insert(0, value)
         return True
-        
-        
 
     def insertLast(self, value: int) -> bool:
         """
@@ -27,7 +23,6 @@ class MyCircularDeque:
             return False
         self.deque.append(value)
         return True
-        
 
     def deleteFront(self) -> bool:
         """
@@ -38,7 +33,6 @@ class MyCircularDeque:
             return True
         except:
             return False
-        
 
     def deleteLast(self) -> bool:
         """
@@ -49,8 +43,6 @@ class MyCircularDeque:
             return True
         except:
             return False
-        
-        
 
     def getFront(self) -> int:
         """
@@ -60,7 +52,6 @@ class MyCircularDeque:
             return -1
         else:
             return self.deque[0]
-        
 
     def getRear(self) -> int:
         """
@@ -76,7 +67,6 @@ class MyCircularDeque:
         Checks whether the circular deque is empty or not.
         """
         return len(self.deque) == 0
-        
 
     def isFull(self) -> bool:
         """

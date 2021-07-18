@@ -10,7 +10,6 @@ ListNode: TypeAlias = SinglyLinkedNode
 
 
 class MyLinkedList:
-
     def __init__(self):
         """
         Initialize your data structure here.
@@ -89,7 +88,7 @@ class MyLinkedList:
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     linkedList = MyLinkedList()
     print(linkedList.listAllValues())
 

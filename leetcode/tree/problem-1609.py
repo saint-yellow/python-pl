@@ -35,23 +35,27 @@ class Solution:
         return True
 
     def __checkLevel(self, numbers: List[int], level: int) -> bool:
-        evenOrOdd = (level+1) % 2
+        evenOrOdd = (level + 1) % 2
         for n in numbers:
             if n % 2 != evenOrOdd:
                 return False
         n = len(numbers)
         if evenOrOdd == 1:
             for i in range(1, n):
-                if numbers[i] <= numbers[i-1]:
+                if numbers[i] <= numbers[i - 1]:
                     return False
         else:
             for i in range(1, n):
-                if numbers[i] >= numbers[i-1]:
+                if numbers[i] >= numbers[i - 1]:
                     return False
         return True
 
 
-if __name__ == '__main__':
-    tree = TreeNode(5, TreeNode(9, TreeNode(3, None), TreeNode(5, None)), TreeNode(1, TreeNode(7, None, None)))
+if __name__ == "__main__":
+    tree = TreeNode(
+        5,
+        TreeNode(9, TreeNode(3, None), TreeNode(5, None)),
+        TreeNode(1, TreeNode(7, None, None)),
+    )
     s = Solution()
     print(s.isEvenOddTree(tree))

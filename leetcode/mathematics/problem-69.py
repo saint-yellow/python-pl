@@ -1,9 +1,10 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
         s = x
+
         def sqrt(x):
             r = (x + s / x) / 2
-            print(f'x={x} x*x={x*x}; r={r}, r*r={r*r}')
+            print(f"x={x} x*x={x*x}; r={r}, r*r={r*r}")
             if r == x:
                 return x
             else:

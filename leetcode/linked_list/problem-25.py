@@ -34,4 +34,3 @@ class Solution:
             l3.next = l2
 
         return head.next
-

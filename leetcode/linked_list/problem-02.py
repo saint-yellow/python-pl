@@ -17,7 +17,7 @@ class Solution:
             if l2:
                 v2 = l2.val
                 l2 = l2.next
-            carry, val = divmod(v1+v2+carry, 10)
+            carry, val = divmod(v1 + v2 + carry, 10)
             l3.next = ListNode(val)
             l3 = l3.next
         return head.next

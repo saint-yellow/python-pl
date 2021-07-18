@@ -39,11 +39,11 @@ class Solution:
         def dfs(node: TreeNode, level: int) -> None:
             if not node:
                 return
-            if len(result) < level+1:
+            if len(result) < level + 1:
                 result.append([])
             result[level].append(node.val)
-            dfs(node.left, level+1)
-            dfs(node.right, level+1)
+            dfs(node.left, level + 1)
+            dfs(node.right, level + 1)
 
         if not root:
             return result

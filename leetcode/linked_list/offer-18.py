@@ -23,7 +23,7 @@ class Solution:
         return sentinel.next
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     linkedList = buildSinglyLinkedList([4, 5, 1, 9])
     s = Solution()
     print(listAllValues(s.deleteNode(linkedList, 4)))

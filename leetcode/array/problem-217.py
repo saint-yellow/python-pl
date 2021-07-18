@@ -5,7 +5,6 @@ class Solution:
     def containsDuplicate(self, numbers: List[int]) -> bool:
         return self.__method1(numbers)
 
-
     # 基于哈希表的解法
     def __method1(self, numbers: List[int]) -> bool:
         d = {}
@@ -30,4 +29,3 @@ class Solution:
             i += 1
             j += 1
         return False
-

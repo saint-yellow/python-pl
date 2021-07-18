@@ -14,23 +14,20 @@ class Solution:
         n = len(A)
         self.__move(n, A, B, C)
 
-
     def __move(self, n: int, start: List[int], middle: List[int], end: List[int]):
         if n == 1:
             end.append(start[-1])
             start.pop()
             return
         else:
-            self.__move(n-1, start, end, middle)
+            self.__move(n - 1, start, end, middle)
             end.append(start[-1])
             start.pop()
-            self.__move(n-1, middle, start, end)
-        
+            self.__move(n - 1, middle, start, end)
 
 
-
-if __name__ == '__main__':
-    A, B, C = [2,1,0], [], []
+if __name__ == "__main__":
+    A, B, C = [2, 1, 0], [], []
     s = Solution()
     s.hanota(A, B, C)
     print(C)

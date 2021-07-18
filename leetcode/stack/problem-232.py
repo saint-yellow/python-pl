@@ -1,7 +1,7 @@
 # LeetCode Problem Nr. 232: 用栈实现队列
 
-class MyQueue:
 
+class MyQueue:
     def __init__(self) -> None:
         self.input_stack = []
         self.output_stack = []

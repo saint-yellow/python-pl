@@ -17,7 +17,7 @@ class Solution:
         return -1 if not u else min(u)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
-    print(s.firstUniqChar('leetcode'))
-    print(s.firstUniqChar('loveleetcode'))
+    print(s.firstUniqChar("leetcode"))
+    print(s.firstUniqChar("loveleetcode"))

@@ -46,7 +46,7 @@ class Solution:
         while stack:
             node: TreeNode = stack[-1]
             if node:
-                stack.pop()             
+                stack.pop()
                 if node.right:
                     stack.append(node.right)
                 if node.left:
@@ -63,7 +63,7 @@ class Solution:
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     tree = TreeNode(1, None, TreeNode(2, TreeNode(3), None))
     print(s.preorderTraversal(tree))

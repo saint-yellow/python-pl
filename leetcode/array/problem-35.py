@@ -7,7 +7,6 @@ class Solution:
     def searchInsert(self, numbers: List[int], target: int) -> int:
         return self.__method2(numbers, target)
 
-
     # 暴力解法
     def __method1(self, numbers: List[int], target: int) -> int:
         length = len(numbers)
@@ -18,13 +17,13 @@ class Solution:
 
     # 基于二分法的解法
     def __method2(self, numbers: List[int], target: int) -> int:
-        left, right = 0, len(numbers)-1
+        left, right = 0, len(numbers) - 1
         while left <= right:
-            middle = (left+right)//2
+            middle = (left + right) // 2
             if numbers[middle] > target:
-                right = middle-1
+                right = middle - 1
             elif numbers[middle] < target:
-                left = middle+1
+                left = middle + 1
             else:
                 return middle
-        return right+1
+        return right + 1

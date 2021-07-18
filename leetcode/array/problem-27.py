@@ -10,7 +10,7 @@ class Solution:
         left, right = 0, len(numbers)
         while left < right:
             if numbers[left] == value:
-                numbers[left] = numbers[right-1]
+                numbers[left] = numbers[right - 1]
                 right -= 1
             else:
                 left += 1
@@ -30,4 +30,3 @@ class Solution:
                 numbers[left] = numbers[right]
                 left += 1
         return left
-

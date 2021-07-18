@@ -16,7 +16,7 @@ class Solution:
         L = self.__getLength(head)
         sentinel = ListNode(-1, head)
         current = sentinel
-        for _ in range(1, L+1-n):
+        for _ in range(1, L + 1 - n):
             current = current.next
         current.next = current.next.next
         return sentinel.next

@@ -5,14 +5,13 @@ class Solution:
     def findContentChildren(self, children: List[int], cookies: List[int]) -> int:
         return self.__method2(children, cookies)
 
-
     # 基于贪心策略的解法
     def __method1(self, children: List[int], cookies: List[int]) -> int:
         children.sort()
         cookies.sort()
-        index = len(cookies)-1
+        index = len(cookies) - 1
         result = 0
-        for i in range(len(children)-1,-1,0):
+        for i in range(len(children) - 1, -1, 0):
             if index >= 0 and cookies[index] >= children[i]:
                 result += 1
                 index -= 1

@@ -7,12 +7,11 @@ class Solution:
     def sortArrayByParity(self, numbers: List[int]) -> List[int]:
         return self.__method1(numbers)
 
-
     def __method1(self, numbers: List[int]) -> List[int]:
         # numbers.sort()
-        left, right = 0, len(numbers)-1
+        left, right = 0, len(numbers) - 1
         while left <= right:
-            a, b = numbers[left]%2, numbers[right]%2
+            a, b = numbers[left] % 2, numbers[right] % 2
             if a == 1 and b == 0:
                 numbers[left], numbers[right] = numbers[right], numbers[left]
                 left += 1
@@ -28,8 +27,8 @@ class Solution:
         return numbers
 
 
-if __name__ == '__main__':
-    numbers = [3,1,2,4]
+if __name__ == "__main__":
+    numbers = [3, 1, 2, 4]
     print(numbers)
 
     s = Solution()

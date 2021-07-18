@@ -7,12 +7,12 @@ class Solution:
 
     # 基于贪心策略的解法
     def __method1(self, numbers: List[int]) -> bool:
-        cover, final = 0, len(numbers)-1
+        cover, final = 0, len(numbers) - 1
         if final == 0:
             return True
         i = 0
         while i <= cover:
-            cover = max(i+numbers[i], cover)
+            cover = max(i + numbers[i], cover)
             if cover >= final:
                 return True
             i += 1

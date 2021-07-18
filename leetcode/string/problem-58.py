@@ -6,7 +6,7 @@ class Solution:
         if not string:
             return 0
 
-        words = string.split(' ')
+        words = string.split(" ")
         for w in words[::-1]:
             if w:
                 return len(w)
@@ -17,9 +17,9 @@ class Solution:
             return 0
 
         count = 0
-        i = len(string)-1
+        i = len(string) - 1
         while i >= 0:
-            if string[i] == ' ':
+            if string[i] == " ":
                 if count > 0:
                     break
                 else:
@@ -30,8 +30,8 @@ class Solution:
         return count
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
-    print(s.lengthOfLastWord('Hello World'))
-    print(s.lengthOfLastWord(' '))
-    print(s.lengthOfLastWord('saint-yellow'))
+    print(s.lengthOfLastWord("Hello World"))
+    print(s.lengthOfLastWord(" "))
+    print(s.lengthOfLastWord("saint-yellow"))

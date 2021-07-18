@@ -25,13 +25,17 @@ class Solution:
             pointer.right = TreeNode(v)
             pointer = pointer.right
 
-    def __method2(self, root: TreeNode) -> None: ...
+    def __method2(self, root: TreeNode) -> None:
+        ...
 
-    def __method3(self, root: TreeNode) -> None: ...
+    def __method3(self, root: TreeNode) -> None:
+        ...
 
 
-if __name__ == '__main__':
-    tree = TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(5, None, TreeNode(6)))
+if __name__ == "__main__":
+    tree = TreeNode(
+        1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(5, None, TreeNode(6))
+    )
     print(TreeNode.preOrderTraversal(tree))
 
     s = Solution()

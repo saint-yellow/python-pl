@@ -4,11 +4,11 @@ class Solution:
 
     def __method1(self, string: str) -> str:
         if not string:
-            return ''
+            return ""
 
         letters = list(string)
-        vowels = 'AaEeIiOoUu'
-        left, right = 0, len(letters)-1
+        vowels = "AaEeIiOoUu"
+        left, right = 0, len(letters) - 1
         while left < right:
             if letters[left] in vowels and letters[right] in vowels:
                 letters[left], letters[right] = letters[right], letters[left]
@@ -21,10 +21,10 @@ class Solution:
             else:
                 left += 1
                 right -= 1
-        return ''.join(letters)
+        return "".join(letters)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
-    print(s.reverseVowels('hello'))
-    print(s.reverseVowels('leetcode'))
+    print(s.reverseVowels("hello"))
+    print(s.reverseVowels("leetcode"))

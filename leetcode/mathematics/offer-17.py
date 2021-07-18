@@ -8,4 +8,4 @@ class Solution:
         return self.__method1(n)
 
     def __method1(self, n: int) -> list[int]:
-        return list(range(1, 10**n))
+        return list(range(1, 10 ** n))

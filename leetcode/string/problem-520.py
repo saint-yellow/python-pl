@@ -1,9 +1,9 @@
-ord_A, ord_Z, ord_a, ord_z = ord('A'), ord('Z'), ord('a'), ord('z')
+ord_A, ord_Z, ord_a, ord_z = ord("A"), ord("Z"), ord("a"), ord("z")
+
 
 class Solution:
     def detectCapitalUse(self, word: str) -> bool:
         return self.__method1(word)
-
 
     def __method1(self, word: str) -> bool:
         def isAllUpper(characters: str) -> bool:
@@ -29,13 +29,11 @@ class Solution:
         else:
             return False
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     s = Solution()
-    print(s.detectCapitalUse('USA'))
-    print(s.detectCapitalUse('leetcode'))
-    print(s.detectCapitalUse('Google'))
-    print(s.detectCapitalUse('FlaG'))
-    print(s.detectCapitalUse('flaG'))
-
-
-        
+    print(s.detectCapitalUse("USA"))
+    print(s.detectCapitalUse("leetcode"))
+    print(s.detectCapitalUse("Google"))
+    print(s.detectCapitalUse("FlaG"))
+    print(s.detectCapitalUse("flaG"))

@@ -15,5 +15,5 @@ class Solution:
                 numbers.pop()
             else:
                 return numbers[-1]
-        
+
         return numbers[0]
