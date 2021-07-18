@@ -1,5 +1,7 @@
 # LeetCode Problem Nr. 101: 对称的二叉树
 
+from typing import List
+
 from typing_extensions import TypeAlias
 
 from ds import BinaryNode
@@ -40,4 +42,25 @@ class Solution:
             queue.append(node2.right)
             queue.append(node1.right)
             queue.append(node2.left)
+        return True
+
+    # 层次遍历
+    def __method3(self, root: TreeNode) -> bool:
+        queue: List[TreeNode] = []
+        if root:
+            queue.append(root)
+
+        while queue:
+            size = len(queue)
+            values = []
+            for _ in range(size):
+                node = queue.pop(0)
+                if node:
+                    values.append(node.val)
+                    queue.append(node.left)
+                    queue.append(node.right)
+                else:
+                    values.append(None)
+            if values != values[::-1]:
+                return False
         return True

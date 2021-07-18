@@ -12,10 +12,9 @@ class Solution:
         return self.__method1(root)
 
     def __method1(self, root: TreeNode) -> bool:
-        ...
-
-    def __method2(self, root: TreeNode) -> bool:
-        ...
+        if self.__getHeight(root) == -1:
+            return False
+        return True
 
     def __getHeight(self, root: TreeNode) -> int:
         if not root:
