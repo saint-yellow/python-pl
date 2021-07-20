@@ -10,24 +10,24 @@ TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
-    def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
-        return self.__method1(inorder, postorder)
+    def buildTree(self, inOrder: List[int], postOrder: List[int]) -> TreeNode:
+        return self.__method1(inOrder, postOrder)
 
-    def __method1(self, inorder: List[int], postorder: List[int]) -> TreeNode:
-        mapper = {value: index for (index, value) in enumerate(inorder)}
+    def __method1(self, inOrder: List[int], postOrder: List[int]) -> TreeNode:
+        mapper = {value: index for (index, value) in enumerate(inOrder)}
 
         def helper(leftIndex: int, rightIndex: int) -> TreeNode:
             if leftIndex > rightIndex:
                 return None
 
-            value = postorder.pop()
+            value = postOrder.pop()
             index = mapper[value]
             root = TreeNode(value, None, None)
             root.right = helper(index + 1, rightIndex)
             root.left = helper(leftIndex, index - 1)
             return root
 
-        return helper(0, len(inorder) - 1)
+        return helper(0, len(inOrder) - 1)
 
-    def __method2(self, inorder: List[int], postorder: List[int]) -> TreeNode:
+    def __method2(self, inOrder: List[int], postOrder: List[int]) -> TreeNode:
         ...
