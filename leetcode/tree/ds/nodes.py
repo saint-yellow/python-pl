@@ -3,13 +3,13 @@ from typing import List
 
 # Definition for a binary tree node.
 class BinaryNode:
-    def __init__(self, val: int = 0, left=None, right=None):
+    def __init__(self, val: int = 0, left: 'BinaryNode' = None, right: 'BinaryNode' = None):
         self.val: int = val
-        self.left = left
-        self.right = right
+        self.left: BinaryNode = left
+        self.right: BinaryNode = right
 
     @staticmethod
-    def preOrderTraversal(root) -> List[int]:
+    def preOrderTraversal(root: 'BinaryNode') -> List[int]:
         if not root:
             return []
         return (
@@ -19,7 +19,7 @@ class BinaryNode:
         )
 
     @staticmethod
-    def inOrderTraversal(root) -> List[int]:
+    def inOrderTraversal(root: 'BinaryNode') -> List[int]:
         if not root:
             return []
         return (
@@ -29,7 +29,7 @@ class BinaryNode:
         )
 
     @staticmethod
-    def postOrderTraversal(root) -> List[int]:
+    def postOrderTraversal(root: 'BinaryNode') -> List[int]:
         if not root:
             return []
         return (
@@ -48,6 +48,6 @@ def listAllValues(root: BinaryNode) -> List[int]:
 
 
 class NAryNode:
-    def __init__(self, val: int = 0, children: List = None):
+    def __init__(self, val: int = 0, children: List['NAryNode'] = None):
         self.val = val
-        self.children = children
+        self.children: List['NAryNode'] = children
