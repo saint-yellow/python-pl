@@ -15,6 +15,15 @@ class SinglyLinkedNode:
             head = head.next
         return result
 
+    @staticmethod
+    def buildList(values: List[int]) -> "SinglyLinkedNode":
+        node = SinglyLinkedNode(-1)
+        head = node
+        for i in values:
+            node.next = SinglyLinkedNode(i, None)
+            node = node.next
+        return head.next
+
 
 class DoublyLinkedNode:
     def __init__(self, val: int, prev=None, next=None):
@@ -29,23 +38,3 @@ class DoublyLinkedNode:
             result.append(head.val)
             head = head.next
         return result
-
-
-def buildSinglyLinkedList(values: List[int]):
-    if not values:
-        return None
-
-    node = SinglyLinkedNode(-1)
-    head = node
-    for i in values:
-        node.next = SinglyLinkedNode(i, None)
-        node = node.next
-    return head.next
-
-
-def listAllValues(head: SinglyLinkedNode) -> List[int]:
-    result = []
-    while head:
-        result.append(head.val)
-        head = head.next
-    return result

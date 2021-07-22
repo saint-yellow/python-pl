@@ -2,7 +2,7 @@
 
 from typing_extensions import TypeAlias
 
-from ds import SinglyLinkedNode, buildSinglyLinkedList, listAllValues
+from ds import SinglyLinkedNode
 
 ListNode: TypeAlias = SinglyLinkedNode
 
@@ -24,7 +24,6 @@ class Solution:
 
 
 if __name__ == "__main__":
-    linkedList = buildSinglyLinkedList([1, 2, 3, 4, 5])
+    linkedList = SinglyLinkedNode.buildList([1, 2, 3, 4, 5])
     s = Solution()
-    node = s.getKthFromEnd(linkedList, 2)
-    print(listAllValues(node))
+    print(SinglyLinkedNode.listAllValues(s.getKthFromEnd(linkedList, 2)))

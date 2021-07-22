@@ -2,7 +2,7 @@
 
 from typing_extensions import TypeAlias
 
-from ds import SinglyLinkedNode, buildSinglyLinkedList
+from ds import SinglyLinkedNode
 
 ListNode: TypeAlias = SinglyLinkedNode
 
@@ -30,7 +30,7 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    list1 = buildSinglyLinkedList([1, 4, 3, 2, 5, 2])
+    list1 = SinglyLinkedNode.buildList([1, 4, 3, 2, 5, 2])
     print(list1.listValues())
     print(s.partition(list1, 3).listValues())
     list2 = ListNode(2, ListNode(1, None))
