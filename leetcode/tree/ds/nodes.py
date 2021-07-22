@@ -12,34 +12,34 @@ class BinaryNode:
 
     # 前序遍历
     @staticmethod
-    def preOrderTraversal(root: "BinaryNode") -> List[int]:
+    def preOrderTraversal(root: "BinaryNode", fillWithNone: bool = False) -> List[int]:
         if not root:
-            return []
+            return [None] if fillWithNone else []
         return (
             [root.val]
-            + BinaryNode.preOrderTraversal(root.left)
-            + BinaryNode.preOrderTraversal(root.right)
+            + BinaryNode.preOrderTraversal(root.left, fillWithNone)
+            + BinaryNode.preOrderTraversal(root.right, fillWithNone)
         )
 
     # 中序遍历
     @staticmethod
-    def inOrderTraversal(root: "BinaryNode") -> List[int]:
+    def inOrderTraversal(root: "BinaryNode", fillWithNone: bool = False) -> List[int]:
         if not root:
-            return []
+            return [None] if fillWithNone else []
         return (
-            BinaryNode.inOrderTraversal(root.left)
+            BinaryNode.inOrderTraversal(root.left, fillWithNone)
             + [root.val]
-            + BinaryNode.preOrderTraversal(root.right)
+            + BinaryNode.preOrderTraversal(root.right, fillWithNone)
         )
 
     # 后序遍历
     @staticmethod
-    def postOrderTraversal(root: "BinaryNode") -> List[int]:
+    def postOrderTraversal(root: "BinaryNode", fillWithNone: bool = False) -> List[int]:
         if not root:
-            return []
+            return [None] if fillWithNone else []
         return (
-            BinaryNode.postOrderTraversal(root.left)
-            + BinaryNode.postOrderTraversal(root.right)
+            BinaryNode.postOrderTraversal(root.left, fillWithNone)
+            + BinaryNode.postOrderTraversal(root.right, fillWithNone)
             + [root.val]
         )
 
@@ -84,7 +84,7 @@ class BinaryNode:
         return result
 
     @staticmethod
-    def buildTree(values: List[Union(int, None)]) -> "BinaryNode":
+    def buildTree(values: List[Union[int, None]]) -> "BinaryNode":
         ...
 
 
