@@ -24,18 +24,18 @@ class Solution:
 
         root = TreeNode(maxValue)
         root.left = self.__method1(numbers[:maxIndex])
-        root.right = self.__method1(numbers[maxIndex + 1:])
+        root.right = self.__method1(numbers[maxIndex + 1 :])
         return root
 
     def __method2(self, numbers: List[int]) -> TreeNode:
         return self.__traversal(numbers, 0, len(numbers))
-    
+
     def __traversal(self, numbers: List[int], left: int, right: int) -> TreeNode:
         if left >= right:
             return None
 
         index = left
-        for i in range(left+1, right):
+        for i in range(left + 1, right):
             if numbers[index] < numbers[i]:
                 index = i
 

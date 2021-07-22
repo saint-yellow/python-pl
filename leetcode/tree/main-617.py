@@ -36,7 +36,7 @@ class Solution:
         while queue:
             node1 = queue.pop(0)
             node2 = queue.pop(0)
-            
+
             node1.val += node2.val
 
             if not (node1.left or node2.left):
