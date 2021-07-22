@@ -10,6 +10,9 @@ TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
+    def __init__(self) -> None:
+        self.previousNode: TreeNode = None
+
     def isValidBST(self, root: TreeNode) -> bool:
         return self.__method1(root)
 
@@ -38,6 +41,36 @@ class Solution:
             + [root.val]
             + self.__inOrderTraversal(root.right)
         )
+
+    def __method2(self, root: TreeNode) -> bool:
+        if not root:
+            return True
+
+        checkLeft = self.__method2(root.left)
+        if self.previousNode and self.previousNode.val >= root.val:
+            return False
+        self.previousNode = root
+
+        checkRight = self.__method2(root.right)
+
+        return checkLeft and checkRight
+
+    def __method3(self, root: TreeNode) -> bool:
+        stack: List[TreeNode] = []
+        currentNode: TreeNode = root
+        previousNode: TreeNode = None
+
+        while currentNode or stack:
+            if currentNode:
+                stack.append(currentNode)
+                currentNode = currentNode.left
+            else:
+                currentNode = stack.pop()
+                if previousNode and currentNode.val <= previousNode.val:
+                    return False
+                previousNode = currentNode
+                currentNode = currentNode.right
+        return True
 
 
 if __name__ == "__main__":
