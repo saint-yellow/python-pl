@@ -32,33 +32,8 @@ class Solution:
             result.append(currentLevel)
         return result
 
-    # 基于广度优先遍历的解法，借助Python的collections模块
-    def __method2(self, root: TreeNode) -> List[List[int]]:
-        result = []
-        if not root:
-            return result
-
-        from collections import deque
-
-        queue = deque()
-        queue.append(root)
-
-        while queue:
-            levelSize = len(queue)
-            currentLevel = []
-            for _ in range(levelSize):
-                node: TreeNode = queue.popleft()
-                currentLevel.append(node.val)
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
-            result.append(currentLevel)
-
-        return result
-
     # 基于深度优先遍历的解法
-    def __method3(self, root: TreeNode) -> List[List[int]]:
+    def __method2(self, root: TreeNode) -> List[List[int]]:
         result: List[List[int]] = []
 
         def dfs(node: TreeNode, level: int) -> None:
