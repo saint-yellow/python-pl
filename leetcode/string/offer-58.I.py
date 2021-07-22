@@ -1,5 +1,6 @@
 # 剑指Offer Problem Nr. 58-I: 翻转单词顺序
 
+
 class Solution:
     def reverseWords(self, string: str) -> str:
         return self.__method1(string)

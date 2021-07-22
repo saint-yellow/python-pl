@@ -24,8 +24,8 @@ class Solution:
         if n == 1:
             return True
 
-        for i in range(n-1):
-            if inOrder[i] >= inOrder[i+1]:
+        for i in range(n - 1):
+            if inOrder[i] >= inOrder[i + 1]:
                 return False
         return True
 
@@ -33,10 +33,14 @@ class Solution:
     def __inOrderTraversal(self, root: TreeNode) -> List[int]:
         if not root:
             return []
-        return self.__inOrderTraversal(root.left) + [root.val] + self.__inOrderTraversal(root.right)
+        return (
+            self.__inOrderTraversal(root.left)
+            + [root.val]
+            + self.__inOrderTraversal(root.right)
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     tree = TreeNode(0, TreeNode(-1))
 
     s = Solution()

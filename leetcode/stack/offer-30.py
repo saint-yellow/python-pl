@@ -11,7 +11,6 @@ class MinStack:
         self.data: List[int] = []
         self.minValue: Union[int, None] = None
 
-
     def push(self, x: int) -> None:
         if not self.data:
             self.data.append(x)
@@ -19,7 +18,6 @@ class MinStack:
         else:
             self.minValue = min(self.minValue, x)
             self.data.append(x)
-
 
     def pop(self) -> None:
         if not self.data:
@@ -32,12 +30,10 @@ class MinStack:
         else:
             self.minValue = min(self.data)
 
-
     def top(self) -> Union[int, None]:
         if not self.data:
             return None
         return self.data[-1]
-
 
     def min(self) -> Union[int, None]:
         return self.minValue

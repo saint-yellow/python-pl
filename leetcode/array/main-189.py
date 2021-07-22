@@ -13,7 +13,7 @@ class Solution:
         numbers[:] = numbers[start:] + numbers[:start]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     numbers = [1, 2, 3, 4, 5, 6, 7]
     print(numbers)
 

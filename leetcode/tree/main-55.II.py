@@ -23,7 +23,7 @@ class Solution:
         checkLeftTree = self.__method1(root.left)
         checkRightTree = self.__method1(root.right)
         return checkLeftTree and checkRightTree
-        
+
     def __getDepth(self, root: TreeNode) -> int:
         if not root:
             return 0
@@ -33,8 +33,12 @@ class Solution:
         return 1 + max(leftDepth, rightDepth)
 
 
-if __name__ == '__main__':
-    tree = TreeNode(1, TreeNode(2, TreeNode(3, TreeNode(4))), TreeNode(2, None, TreeNode(3, None, TreeNode(4))))
+if __name__ == "__main__":
+    tree = TreeNode(
+        1,
+        TreeNode(2, TreeNode(3, TreeNode(4))),
+        TreeNode(2, None, TreeNode(3, None, TreeNode(4))),
+    )
 
     s = Solution()
     print(s.isBalanced(tree))

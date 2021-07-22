@@ -23,7 +23,7 @@ class Solution:
             right += 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     numbers = [0, 1, 0, 3, 12]
     print(numbers)
 

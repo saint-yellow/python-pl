@@ -45,7 +45,11 @@ class Solution:
                 break
             delimiterIndex += 1
 
-        root.left = self.__method2(preOrder[1:delimiterIndex+1], inOrder[0:delimiterIndex])
-        root.right = self.__method2(preOrder[delimiterIndex+1:], inOrder[delimiterIndex+1:])
+        root.left = self.__method2(
+            preOrder[1 : delimiterIndex + 1], inOrder[0:delimiterIndex]
+        )
+        root.right = self.__method2(
+            preOrder[delimiterIndex + 1 :], inOrder[delimiterIndex + 1 :]
+        )
 
         return root
