@@ -85,11 +85,22 @@ class BinaryNode:
 
     @staticmethod
     def buildTree(values: List[Union[int, None]]) -> "BinaryNode":
-        ...
+        if not values:
+            return None
+
+        nodes: List[Union[BinaryNode, None]] = [
+            None if not v else BinaryNode(v) for v in values
+        ]
+        lastIndex = len(values) - 1
+        fatherCount = lastIndex // 2 - 1
+        for i in range(fatherCount + 1):
+            nodes[i].left = nodes[2 * i + 1]
+            nodes[i].right = nodes[2 * i + 2]
+        return nodes[0]
 
 
 class NAryNode:
-    def __init__(self, val: int = 0, children: List["NAryNode"] = None):
+    def __init__(self, val: int = 0, children: List["NAryNode"] = None) -> None:
         self.val = val
         self.children: List["NAryNode"] = children
 
