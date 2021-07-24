@@ -21,7 +21,7 @@ class Solution:
         return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     ranges = [[1, 10], [10, 20]]
     left, right = 21, 21
 

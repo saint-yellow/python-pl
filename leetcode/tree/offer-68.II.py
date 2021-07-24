@@ -8,7 +8,9 @@ TreeNode: TypeAlias = BinaryNode
 
 
 class Solution:
-    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+    def lowestCommonAncestor(
+        self, root: TreeNode, p: TreeNode, q: TreeNode
+    ) -> TreeNode:
         return self.__method1(root, p, q)
 
     def __method1(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
@@ -25,5 +27,3 @@ class Solution:
         if not left and right:
             return right
         return None
-
-        
