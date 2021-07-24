@@ -18,7 +18,7 @@ class Solution:
                 stack.pop()
                 j += 1
 
-        return j == n 
+        return j == n
 
 
 if __name__ == "__main__":
