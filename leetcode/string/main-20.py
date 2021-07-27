@@ -1,5 +1,6 @@
 # LeetCode Problem Nr. 20: 有效的括号
 
+
 class Solution:
     def isValid(self, s: str) -> bool:
         return self.__method1(s)

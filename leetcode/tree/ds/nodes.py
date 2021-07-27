@@ -94,8 +94,9 @@ class BinaryNode:
         lastIndex = len(values) - 1
         fatherCount = lastIndex // 2 - 1
         for i in range(fatherCount + 1):
-            nodes[i].left = nodes[2 * i + 1]
-            nodes[i].right = nodes[2 * i + 2]
+            if nodes[i]:
+                nodes[i].left = nodes[2 * i + 1]
+                nodes[i].right = nodes[2 * i + 2]
         return nodes[0]
 
 
