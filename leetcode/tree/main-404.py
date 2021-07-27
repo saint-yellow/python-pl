@@ -4,7 +4,7 @@ from typing import List
 
 from typing_extensions import TypeAlias
 
-from ds import BinaryNode
+from ..ds import BinaryNode
 
 TreeNode: TypeAlias = BinaryNode
 

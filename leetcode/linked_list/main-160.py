@@ -1,6 +1,6 @@
 from typing_extensions import TypeAlias
 
-from ds import SinglyLinkedNode
+from ..ds import SinglyLinkedNode
 
 ListNode: TypeAlias = SinglyLinkedNode
 

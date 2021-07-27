@@ -2,7 +2,7 @@
 
 from typing_extensions import TypeAlias
 
-from ds import SinglyLinkedNode, listAllValues
+from ..ds import SinglyLinkedNode, listAllValues
 
 ListNode: TypeAlias = SinglyLinkedNode
 

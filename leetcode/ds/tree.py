@@ -104,7 +104,3 @@ class NAryNode:
     def __init__(self, val: int = 0, children: List["NAryNode"] = None) -> None:
         self.val = val
         self.children: List["NAryNode"] = children
-
-
-class BinarySearchNode(BinaryNode):
-    ...

@@ -2,7 +2,7 @@
 
 from typing import Dict, List, Union
 
-from ds import SinglyLinkedNode
+from ..ds import SinglyLinkedNode
 
 
 class Node(SinglyLinkedNode):

@@ -1,6 +1,6 @@
 # LeetCode Problem Nr. 572: 另一棵树的子树
 
-from ds import BinaryNode
+from ..ds import BinaryNode
 from typing_extensions import TypeAlias
 
 TreeNode: TypeAlias = BinaryNode
