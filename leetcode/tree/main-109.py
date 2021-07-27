@@ -34,5 +34,5 @@ class Solution:
         value = values[index]
         root = TreeNode(value)
         root.left = self.__buildBST(values[:index])
-        root.right = self.__buildBST(values[index+1:])
+        root.right = self.__buildBST(values[index + 1 :])
         return root

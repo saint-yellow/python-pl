@@ -27,11 +27,7 @@ class Solution:
 
         left, right = root.left, root.right
         root.left, root.right = None, None
-        return (
-            self.__inOrderTraversal(left) +
-            [root] +
-            self.__inOrderTraversal(right)
-        )
+        return self.__inOrderTraversal(left) + [root] + self.__inOrderTraversal(right)
 
     def __buildBST(self, nodes: List[TreeNode]) -> TreeNode:
         if not nodes:
@@ -40,14 +36,14 @@ class Solution:
         middleIndex = len(nodes) // 2
         root = nodes[middleIndex]
         root.left = self.__buildBST(nodes[:middleIndex])
-        root.right = self.__buildBST(nodes[middleIndex+1:])
+        root.right = self.__buildBST(nodes[middleIndex + 1 :])
         return root
 
     def __isBalanced(self, root: TreeNode) -> bool:
         ...
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     numbers = [None] * 15
     numbers[0], numbers[2], numbers[6], numbers[14] = 1, 2, 3, 4
     tree = TreeNode.buildTree(numbers)

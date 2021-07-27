@@ -19,8 +19,8 @@ class Solution:
         preOrder.sort()
         firstMinimumValue = preOrder[0]
         for n in preOrder[1:]:
-           if n > firstMinimumValue:
-               return n
+            if n > firstMinimumValue:
+                return n
         return -1
 
     def __preOrderTraversal(self, root: TreeNode) -> List[int]:
@@ -48,10 +48,8 @@ class Solution:
 
         return result
 
-    
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     tree1 = TreeNode.buildTree([2, 2, 5, None, None, 5, 7])
     tree2 = TreeNode.buildTree([2, 2, 2])
 

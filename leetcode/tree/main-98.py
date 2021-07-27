@@ -19,7 +19,7 @@ class Solution:
     # 基于中序遍历的解法
 
     def __method1(self, root: TreeNode) -> bool:
-        inOrder = self.__inOrderTravesal(root)
+        inOrder = self.__inOrderTraversal(root)
         if not inOrder:
             return True
 

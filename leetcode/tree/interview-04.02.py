@@ -21,5 +21,5 @@ class Solution:
         value = numbers[index]
         root = TreeNode(value)
         root.left = self.__method1(numbers[:index])
-        root.right = self.__method1(numbers[index+1:])
+        root.right = self.__method1(numbers[index + 1 :])
         return root
