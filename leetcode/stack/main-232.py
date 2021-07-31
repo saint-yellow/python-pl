@@ -1,10 +1,13 @@
 # LeetCode Problem Nr. 232: 用栈实现队列
 
 
+from typing import List
+
+
 class MyQueue:
     def __init__(self) -> None:
-        self.input_stack = []
-        self.output_stack = []
+        self.input_stack: List[int] = []
+        self.output_stack: List[int] = []
 
     def push(self, x: int) -> None:
         self.input_stack.append(x)
@@ -24,7 +27,4 @@ class MyQueue:
             return self.output_stack[-1]
 
     def empty(self) -> bool:
-        if not self.input_stack and not self.output_stack:
-            return True
-        else:
-            return False
+        return not (self.input_stack or self.output_stack)

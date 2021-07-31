@@ -1,10 +1,13 @@
+from typing import List
+
+
 class MyCircularDeque:
     def __init__(self, k: int):
         """
         Initialize your data structure here. Set the size of the deque to be k.
         """
-        self.deque = []
-        self.capacity = k
+        self.deque: List[int] = []
+        self.capacity: int = k
 
     def insertFront(self, value: int) -> bool:
         """
