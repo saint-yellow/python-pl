@@ -22,7 +22,7 @@ class Solution:
 
     def __maxDepth(self, root: TreeNode) -> int:
         # 空二叉树
-        if root is None:
+        if not root:
             return 0
 
         leftDepth = self.__maxDepth(root.left)
