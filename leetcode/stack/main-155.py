@@ -1,12 +1,15 @@
 # LeetCode Problem Nr. 155: 最小栈
 
 
+from typing import List, Tuple
+
+
 class MinStack:
     def __init__(self):
         """
         initialize your data structure here.
         """
-        self.data = []
+        self.data: List[Tuple[int, int]] = []
 
     def push(self, val: int) -> None:
         if not self.data:
