@@ -7,6 +7,9 @@ ListNode: TypeAlias = SinglyLinkedNode
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        return self.__method1(l1, l2)
+
+    def __method1(self, l1: ListNode, l2: ListNode) -> ListNode:
         carry = 0
         head = l3 = ListNode(0)
         while l1 or l2 or carry:
